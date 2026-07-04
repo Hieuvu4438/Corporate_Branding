@@ -1,16 +1,16 @@
-# Design Guidelines: Corporate Branding & E-Commerce Showcase (Editorial Luxury Theme)
+# Design Guidelines: Corporate Branding & E-Commerce Showcase (Obsidian Minimalist & Cinematic Glassmorphism)
 
-This document establishes the updated color palette, typography hierarchy, double-bezel nested card layouts, button-in-button CTAs, and custom motion guidelines. It transitions the website from a basic landing page layout into a premium, Awwwards-tier digital experience, following the "Editorial Luxury" and "Soft Structuralism" design systems.
+This document establishes the updated color palette, typography hierarchy, double-bezel nested glass card layouts, nested CTAs, and custom motion guidelines. It transitions the website into an elite, award-tier digital experience, following the "Obsidian Minimalist" and "Cinematic Glassmorphism" design systems.
 
 ---
 
 ## 1. Aesthetic Identity & Style Family
 
-- **Style Family**: **Editorial Luxury + Soft Structuralism**. A high-end hybrid using warm cream backgrounds, graphite-near-black text, refined sage-green and terracotta-orange highlights, elegant editorial serif headings, and premium geometric sans-serif body text.
-- **Mood**: Refined, trustworthy, architectural, and premium.
+- **Style Family**: **Obsidian Minimalist & Cinematic Glassmorphism**. A high-end dark theme using deep obsidian backgrounds, soft platinum text, glowing emerald-green and warm copper highlights, elegant display headings, and premium geometric sans-serif body text.
+- **Mood**: Cinematic, mysterious, trustworthy, and premium.
 - **Design Configuration (The Dials)**:
   * `DESIGN_VARIANCE`: 8 (Asymmetric bento layouts, staggered offsets, vertical rhythm breaks)
-  * `MOTION_INTENSITY`: 7 (Cinematic entry transitions, custom bezier springs, magnetic button physics)
+  * `MOTION_INTENSITY`: 8 (Cinematic entry transitions, scale reveals, scroll triggers)
   * `VISUAL_DENSITY`: 3.5 (Generous macro-whitespace, airy sections, large layouts)
 
 ---
@@ -21,37 +21,38 @@ We map our theme variables in `app/globals.css` to these values:
 
 ```css
 @theme inline {
-  /* Surface Palette (Editorial Cream & Stone) */
-  --background: oklch(0.985 0.003 70);       /* Soft editorial paper-cream (#FAF8F5) */
-  --foreground: oklch(0.22 0.01 70);         /* Deep graphite near-black text (#1E1D1B) */
+  /* Surface Palette (Obsidian & Platinum Glass) */
+  --background: oklch(0.12 0.015 250);       /* Deep obsidian black (#0B0D12) */
+  --foreground: oklch(0.93 0.01 250);        /* Platinum near-white text (#EDEFF2) */
   
-  --card: oklch(1 0 0);                     /* Pure white inner core card */
-  --card-foreground: oklch(0.22 0.01 70);
+  --card: oklch(0.16 0.015 250 / 0.6);       /* Translucent dark core card with glass blur */
+  --card-foreground: oklch(0.93 0.01 250);
   
   /* Brand Accents (Restrained Saturation < 80%) */
-  --primary: oklch(0.45 0.07 150);          /* Muted Sage Green (#2E4A3F) - represent capabilities/trust */
-  --primary-foreground: oklch(0.98 0.003 70);
+  --primary: oklch(0.75 0.14 150);          /* Glowing Mint/Emerald Green (#7BF1A8) */
+  --primary-foreground: oklch(0.12 0.015 250);
   
-  --secondary: oklch(0.58 0.13 35);         /* Warm Terracotta (#B85C46) - highlights/indicators */
-  --secondary-foreground: oklch(0.98 0.003 70);
+  --secondary: oklch(0.68 0.18 45);         /* Warm Copper/Amber (#E68C5E) */
+  --secondary-foreground: oklch(0.12 0.015 250);
 
-  --muted: oklch(0.96 0.005 70);            /* Warm sandstone light gray (#F4F2EE) */
-  --muted-foreground: oklch(0.48 0.008 70);  /* Muted dark-gray label text (#76726E) */
+  --muted: oklch(0.18 0.015 250 / 0.5);      /* Dark steel translucent gray */
+  --muted-foreground: oklch(0.62 0.01 250);  /* Muted silver label text (#9EA3AD) */
   
-  --accent: oklch(0.94 0.015 150);          /* Very soft sage-cream for highlights (#E9EFE9) */
-  --accent-foreground: oklch(0.22 0.01 70);
+  --accent: oklch(0.20 0.02 150 / 0.3);      /* Translucent mint-glow highlights */
+  --accent-foreground: oklch(0.93 0.01 250);
 
-  --border: oklch(0.91 0.004 70);           /* Soft warm-gray hairline outline (#E6E2DC) */
-  --input: oklch(0.91 0.004 70);
-  --ring: oklch(0.45 0.07 150);             /* Sage green focus ring */
+  --border: oklch(0.24 0.015 250 / 0.4);     /* Soft glowing hairline border */
+  --input: oklch(0.20 0.015 250 / 0.5);
+  --ring: oklch(0.75 0.14 150);             /* Mint green focus ring */
 
   /* Machined Double-Bezel Radius scale */
   --radius-outer: 24px;                     /* Outer rounded radius */
   --radius-inner: 18px;                     /* Inner content container (outer - 6px padding) */
   --radius-btn: 9999px;                     /* Full pill-shape buttons */
 
-  /* Colored Diffused Shadows */
-  --shadow-card-subtle: 0 16px 40px oklch(0.22 0.01 70 / 0.04);
+  /* Colored Diffused Shadows & Blurs */
+  --shadow-card-subtle: 0 16px 40px oklch(0 0 0 / 0.4);
+  --glass-blur: blur(12px);
 }
 ```
 
@@ -59,24 +60,24 @@ We map our theme variables in `app/globals.css` to these values:
 
 ## 3. Typography & Pairings
 
-We pair an editorial serif display font with a geometric sans-serif body font for an expensive, custom-crafted feel.
-- **Display Headings (`font-display`)**: `Playfair Display` or `Cormorant Garamond` (High-contrast, elegant editorial serifs).
+We pair an elegant serif display font with a geometric sans-serif body font for an expensive, custom-crafted feel.
+- **Display Headings (`font-display`)**: `Playfair Display` or `Cormorant Garamond` (High-contrast display serif).
 - **Body & UI Elements (`font-sans`)**: `Plus Jakarta Sans` or `Outfit` (Clean, geometric, premium humanist sans-serif).
 - **Conventions**:
   - Display title letter-spacing: `-0.02em` (`tracking-tight`) to `-0.04em` (`tracking-tighter`).
   - No orphan words: Enforce `text-wrap: balance` on section headers.
-  - Display descender clearance: Italic display words must use a line-height of at least `leading-[1.1]` and appropriate bottom padding to prevent clipped tails (e.g., `pb-1`).
+  - H1 Hero text must NOT exceed 2 to 3 lines. Keep it wide and horizontal.
   - Italic/bold emphasis: Apply italics or bold weights of the *same* font family. Never mix serif and sans in a single word-by-word highlight.
 
 ---
 
-## 4. Double-Bezel (Doppelrand) Nested Card Architecture
+## 4. Double-Bezel (Doppelrand) Glass Card Architecture
 
-To convey physical depth, card containers must use nested layers to look like a glass plate sitting in an aluminum bezel.
+To convey physical depth in dark mode, card containers must use nested layers to look like a glass plate sitting in an obsidian bezel.
 1. **Outer Shell**:
-   - Class: `bg-muted/50 border border-border p-2 rounded-[24px]` (radius-outer).
+   - Class: `bg-muted border border-border p-2 rounded-[24px] backdrop-blur-md` (radius-outer).
 2. **Inner Core**:
-   - Class: `bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle` (radius-inner).
+   - Class: `bg-card border border-white/5 p-6 rounded-[18px] shadow-card-subtle backdrop-blur-lg` (radius-inner).
    - This prevents flat, plain card layouts and creates high-end visual layering.
 
 ---
@@ -84,23 +85,24 @@ To convey physical depth, card containers must use nested layers to look like a 
 ## 5. Nested CTA & "Island" Button Design
 
 Primary call-to-actions are pill-shaped and include a distinct interactive circle for their trailing icon:
-- **Main Button Pill**: `bg-primary text-primary-foreground hover:opacity-95 font-bold rounded-full px-6 py-3 text-sm flex items-center gap-4 transition-all duration-300`
-- **Button-in-Button Icon**: Any arrow (`↗`) or icon is nested inside its own round wrapper: `h-8 w-8 rounded-full bg-white/10 flex items-center justify-center shrink-0` (or `bg-black/5` on light buttons).
+- **Main Button Pill**: `bg-primary text-primary-foreground hover:brightness-110 font-bold rounded-full px-6 py-3 text-sm flex items-center gap-4 transition-all duration-300 shadow-button`
+- **Button-in-Button Icon**: Any arrow (`↗`) or icon is nested inside its own round wrapper: `h-8 w-8 rounded-full bg-black/10 flex items-center justify-center shrink-0` (or `bg-white/10` on dark/secondary buttons).
 - **Hover Physics**: The button scales slightly on hover/active (`active:scale-[0.98] transition-all`) and the nested icon translates diagonally: `group-hover:translate-x-1 group-hover:-translate-y-1`.
 
 ---
 
 ## 6. Layout Upgrades
 
-- **Asymmetrical Bento Grids**: Break symmetry. Group capabilities and showcases in 2x2 or 3-column bento grids of varying card spans.
-- **Section Layout Diversity**: No two consecutive sections may use the same layout. Alternating "left-image + right-text" zigzag is banned past 2 sections.
-- **whitespace Maximization**: Use spacious padding `py-24 md:py-32` to allow sections to breathe.
-- **Eyebrow Tag Constraint**: Section eyebrows (`text-[10px] uppercase tracking-[0.2em] font-medium`) are limited to a maximum of 1 eyebrow per 3 page sections to avoid repetitive, templated grids.
+- **Asymmetrical Bento Grids**: Break symmetry. Group capabilities and showcases in 2x2 or 3-column bento grids of varying card spans. Use `grid-flow-dense` to ensure zero empty cells.
+- **Section Layout Diversity**: No two consecutive sections may use the same layout. Alternating "left-image + right-text" zigzag is banned.
+- **whitespace Maximization**: Use spacious padding `py-32 md:py-48` to allow sections to breathe.
+- **No cheap labels**: BANNED FOREVER are labels like "SECTION 01", "ABOUT US", "FAQ". Let the content and layout speak for themselves.
 
 ---
 
 ## 7. Motion Choreography (Spring Physics)
 
-- **Cubic Bezier Easing**: `transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)]`.
-- **Scroll Entry Reveals**: As sections scroll into the viewport, they execute a subtle translation + fade (`translate-y-12 opacity-0 blur-sm` to `translate-y-0 opacity-100 blur-0` over 800ms).
+- **Scroll Entry Reveals**: As sections scroll into the viewport, they execute a subtle transition + fade (`translate-y-12 opacity-0 blur-sm` to `translate-y-0 opacity-100 blur-0` over 800ms).
+- **Hover Scale**: Every clickable card and image must react on hover. Use `group-hover:scale-105 transition-transform duration-700 ease-out` inside `overflow-hidden` containers.
 - **GPU Acceleration**: Always animate using `transform` and `opacity` to avoid mobile paint lag.
+- **No horizontal scroll**: Wrap the entire page in `overflow-x-hidden w-full max-w-full` to prevent horizontal scrollbars caused by off-screen animations.

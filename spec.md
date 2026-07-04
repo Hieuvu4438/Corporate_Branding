@@ -1,16 +1,17 @@
 # Spec: Corporate Branding Portfolio Website (Next.js & React)
 
 ## Objective
-To build a premium, responsive multi-page portfolio website for our agency using a modern React & Next.js framework. The visual design is inspired by the modern, warm "HopeRise" Dribbble showcase, and the structure is adapted from `nodesign.vn`. The pages will contain custom header/footer layout, interactive components (accordions, switchers), and clean, realistic placeholder content for sections the client will fill in later.
+To build a premium, responsive multi-page portfolio website for our agency using a modern React & Next.js framework. The visual design is inspired by the "Obsidian Minimalist & Cinematic Glassmorphism" theme (Awwwards-tier digital experience, following taste-skill principles). The homepage will be revamped with a full-screen, high-contrast background hero image, custom header/footer layout, smooth scroll-entry animations, and clean glassmorphic double-bezel cards.
 
 ---
 
 ## Tech Stack
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js 16+ (App Router)
 - **Language**: TypeScript (Strict Mode)
-- **Styling**: Tailwind CSS (v4/v3 with CSS variables and OKLCH color space config)
+- **Styling**: Tailwind CSS (v4 with CSS variables and OKLCH color space config)
 - **UI Components**: Shadcn UI (Radix UI primitives)
 - **Icons**: Lucide React
+- **Animation**: Custom React IntersectionObserver hook (`useIntersectionObserver`) styled with modern GPU-accelerated Tailwind transitions (avoiding external dependencies to optimize loading performance).
 - **Development Tooling**:
   - Package Manager: `npm`
   - Linting: `eslint` (Strict React/TS rules)
@@ -27,10 +28,10 @@ npm install
 npm run dev
 
 # Build: Compile production bundle
-npm run build
+npm build
 
 # Start: Run production server locally
-npm run start
+npm start
 
 # Lint: Run ESLint and check types
 npm run lint
@@ -56,6 +57,26 @@ We adhere to Next.js App Router patterns:
 │   │   └── page.tsx       # Q&A (Hỏi đáp)
 │   ├── contact/
 │   │   └── page.tsx       # Contact (Liên hệ)
+│   ├── services/
+│   │   └── page.tsx       # Trang 1: Specific Product/Service
+│   ├── case-studies/
+│   │   └── page.tsx       # Trang 2: Detailed Project Case Study
+│   ├── legal/
+│   │   └── page.tsx       # Trang 3: Legal & Regulatory Compliance
+│   ├── construction/
+│   │   └── page.tsx       # Trang 4: Live Construction Progress
+│   ├── methodology/
+│   │   └── page.tsx       # Trang 5: Proprietary Methodological Process
+│   ├── team/
+│   │   └── page.tsx       # Trang 6: Executive Board & SME Bios
+│   ├── certifications/
+│   │   └── page.tsx       # Trang 7: Accreditations, Certifications & Standards
+│   ├── partners/
+│   │   └── page.tsx       # Trang 8: Strategic Partners & External Reviews
+│   ├── resources/
+│   │   └── page.tsx       # Trang 9: Knowledge Portal & Resource Library
+│   ├── booking/
+│   │   └── page.tsx       # Trang 10: Bottom-of-Funnel Conversion & Booking
 │   └── globals.css        # Tailwind directives + HopeRise OKLCH tokens
 ├── components/
 │   ├── ui/                # Shadcn UI primitives (button, accordion, dialog, input, etc.)
@@ -67,6 +88,9 @@ We adhere to Next.js App Router patterns:
 │   └── utils.ts           # Tailwind CSS class merging helper
 ├── asset/
 │   └── img/               # Image screenshots (LegalDiff, CareMate)
+├── docs/
+│   ├── ecommerce/         # E-commerce documents
+│   └── pages/             # 10 pages detailed specifications (.md files)
 ├── PRODUCT.md             # Product description
 ├── DESIGN.md              # Styling rules and design tokens
 ├── spec.md                # This technical specification
@@ -111,12 +135,25 @@ We enforce clean, type-safe development using functional React paradigms:
 ## Success Criteria
 - [ ] Working Next.js App Router project initialized with TypeScript and Tailwind CSS.
 - [ ] Set up Shadcn UI component library and configured the HopeRise theme in OKLCH.
-- [ ] Six functional pages created under `app/` structure (`/`, `/about`, `/capabilities`, `/projects`, `/faq`, `/contact`).
+- [ ] Six core pages created under `app/` structure (`/`, `/about`, `/capabilities`, `/projects`, `/faq`, `/contact`).
+- [ ] 10 detailed markdown documents created under `docs/pages/` specifying Trang 1 to Trang 10.
+- [ ] 10 new pages implemented in `app/` with HopeRise / Editorial Luxury design styling:
+  - [ ] `/services` features an interactive mind map and product/service comparison table.
+  - [ ] `/case-studies` features a linear story path and before/after layout slider component.
+  - [ ] `/legal` features categorised folders and an in-browser document preview.
+  - [ ] `/construction` features site statistics, reverse timeline updates, and a Gantt timeline chart.
+  - [ ] `/methodology` features step-by-step process milestones and duration timeline estimator.
+  - [ ] `/team` features profiles grid, SME specialties filter, and bios Drawer detail panel.
+  - [ ] `/certifications` features accreditations bento showcase and verified credential Dialogs.
+  - [ ] `/partners` features grayscale logos list and social-linked testimonials grid.
+  - [ ] `/resources` features live keyword search and gated resource downloads.
+  - [ ] `/booking` features distraction-free layout with calendar scheduler and SLA dashboard.
 - [ ] The global layout (`app/layout.tsx`) includes a responsive header navigation and the custom persistent footer.
 - [ ] Projects page features interactive showcase switcher between LegalDiff and CareMate, rendering high-fidelity screenshot assets.
 - [ ] FAQ page uses Shadcn/Radix Accordion component for smooth collapsible Q&A items.
 - [ ] Contact page contains interactive client-side form validation with visual feedback states.
 - [ ] Responsive design scales correctly across mobile, tablet, and desktop breakpoints.
+- [ ] The entire site compiles successfully with `npm run build` and runs without errors.
 
 ---
 

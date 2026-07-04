@@ -1,34 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  /* HopeRise Design System Tokens - Editorial Luxury & Soft Structuralism Hybrid (OKLCH) */
-  --background: oklch(0.985 0.003 70);       /* Soft paper-cream background (#FAF8F5) */
-  --foreground: oklch(0.22 0.01 70);         /* Deep graphite near-black text (#1E1D1B) */
+  /* HopeRise Design System Tokens - Obsidian Minimalist & Cinematic Glassmorphism (OKLCH) */
+  --background: oklch(0.12 0.015 250);       /* Deep obsidian black (#0B0D12) */
+  --foreground: oklch(0.93 0.01 250);        /* Platinum near-white text (#EDEFF2) */
   
-  --card: oklch(1 0 0);                     /* Pure white inner core card */
-  --card-foreground: oklch(0.22 0.01 70);
+  --card: oklch(0.16 0.015 250 / 0.6);       /* Translucent dark core card with glass blur */
+  --card-foreground: oklch(0.93 0.01 250);
   
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.01 70);
+  --popover: oklch(0.16 0.015 250 / 0.6);
+  --popover-foreground: oklch(0.93 0.01 250);
 
-  --primary: oklch(0.45 0.07 150);          /* Muted Sage Green (#2E4A3F) - capabilities/trust */
-  --primary-foreground: oklch(0.98 0.003 70);
+  --primary: oklch(0.75 0.14 150);          /* Glowing Mint/Emerald Green (#7BF1A8) */
+  --primary-foreground: oklch(0.12 0.015 250);
 
-  --secondary: oklch(0.58 0.13 35);         /* Warm Terracotta (#B85C46) - highlights/indicators */
-  --secondary-foreground: oklch(0.98 0.003 70);
+  --secondary: oklch(0.68 0.18 45);         /* Warm Copper/Amber (#E68C5E) */
+  --secondary-foreground: oklch(0.12 0.015 250);
 
-  --muted: oklch(0.96 0.005 70);            /* Warm sandstone light gray (#F4F2EE) */
-  --muted-foreground: oklch(0.48 0.008 70);  /* Muted dark-gray label text (#76726E) */
+  --muted: oklch(0.18 0.015 250 / 0.5);      /* Dark steel translucent gray */
+  --muted-foreground: oklch(0.62 0.01 250);  /* Muted silver label text (#9EA3AD) */
 
-  --accent: oklch(0.94 0.015 150);          /* Soft sage highlight (#E9EFE9) */
-  --accent-foreground: oklch(0.22 0.01 70);
+  --accent: oklch(0.20 0.02 150 / 0.3);      /* Translucent mint-glow highlights */
+  --accent-foreground: oklch(0.93 0.01 250);
 
   --destructive: oklch(0.4 0.18 25);
   --destructive-foreground: oklch(0.98 0.003 70);
 
-  --border: oklch(0.91 0.004 70);           /* Soft warm-gray hairline outline (#E6E2DC) */
-  --input: oklch(0.91 0.004 70);
-  --ring: oklch(0.45 0.07 150);             /* Sage green focus ring */
+  --border: oklch(0.24 0.015 250 / 0.4);     /* Soft glowing hairline border */
+  --input: oklch(0.20 0.015 250 / 0.5);
+  --ring: oklch(0.75 0.14 150);             /* Mint green focus ring */
 
   /* Machined Double-Bezel Radius scale */
   --radius-outer: 24px;
@@ -66,8 +66,8 @@
   --radius-lg: var(--radius-lg);
 
   /* Custom Shadows & Buttons */
-  --shadow-card-subtle: 0 16px 40px oklch(0.22 0.01 70 / 0.04);
-  --shadow-button: 0 4px 12px oklch(0.45 0.07 150 / 0.15);
+  --shadow-card-subtle: 0 16px 40px oklch(0.12 0.015 250 / 0.3);
+  --shadow-button: 0 4px 12px oklch(0.75 0.14 150 / 0.2);
 
   /* Accordion Animations */
   --animate-accordion-down: accordion-down 0.2s ease-out;
