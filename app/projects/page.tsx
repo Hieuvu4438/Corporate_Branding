@@ -1,161 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Star, FileText, Smartphone, Laptop, GraduationCap, HeartPulse, ShieldCheck, Zap, MoveUpRight } from "lucide-react";
+import { ArrowRight, Star, MoveUpRight } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
-
-interface BrowserMockupProps {
-  src: string;
-  url: string;
-  alt: string;
-  className?: string;
-}
-
-function BrowserMockup({ src, url, alt, className = "" }: BrowserMockupProps) {
-  return (
-    <div className={`w-full bg-card border border-border rounded-xl overflow-hidden shadow-card-subtle flex flex-col group/browser transition-all duration-500 hover:-translate-y-1 ${className}`}>
-      {/* Window Header */}
-      <div className="bg-muted/30 border-b border-border px-4 py-3 flex items-center gap-3 shrink-0 select-none">
-        {/* Window controls */}
-        <div className="flex gap-1.5 shrink-0">
-          <div className="h-2.5 w-2.5 rounded-full bg-[#FF5F56]/90 shadow-sm"></div>
-          <div className="h-2.5 w-2.5 rounded-full bg-[#FFBD2E]/90 shadow-sm"></div>
-          <div className="h-2.5 w-2.5 rounded-full bg-[#27C93F]/90 shadow-sm"></div>
-        </div>
-        {/* Address bar */}
-        <div className="mx-auto w-1/2 bg-background border border-border/80 text-[10px] text-muted-foreground py-1 px-3 rounded-full text-center truncate font-mono select-all tracking-wide">
-          {url}
-        </div>
-      </div>
-      {/* Screen Frame */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
-        <img
-          src={src}
-          alt={alt}
-          className="object-cover w-full h-full transition-transform duration-700 group-hover/browser:scale-[1.01]"
-        />
-        {/* Glass reflection */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/2 to-white/5 pointer-events-none z-10" />
-      </div>
-    </div>
-  );
-}
-
-interface IPhone17ProMaxMockupProps {
-  src: string;
-  alt: string;
-  className?: string;
-}
-
-function IPhone17ProMaxMockup({ src, alt, className = "" }: IPhone17ProMaxMockupProps) {
-  return (
-    <div className={`relative aspect-[421/852] bg-[#E4E4E7] dark:bg-[#18181B] rounded-[11.5%] p-[1.5%] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all duration-500 hover:shadow-primary/10 select-none ${className}`}>
-      {/* Outer steel band highlight */}
-      <div className="absolute inset-0 rounded-[11.5%] border border-[#D4D4D8] dark:border-[#27272A] pointer-events-none" />
-      
-      {/* Black Bezel container */}
-      <div className="relative w-full h-full bg-black rounded-[10%] p-[2.5%] overflow-hidden flex flex-col">
-        {/* Screen Glass Panel */}
-        <div className="relative w-full h-full bg-zinc-950 rounded-[8.5%] overflow-hidden">
-          <img
-            src={src}
-            alt={alt}
-            className="object-cover w-full h-full transition-transform duration-700 hover:scale-[1.02]"
-          />
-          {/* Glass Reflection */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.04] to-white/[0.1] pointer-events-none z-10" />
-        </div>
-
-        {/* Dynamic Island */}
-        <div className="absolute top-[4.5%] left-1/2 -translate-x-1/2 w-[28%] h-[3.5%] bg-black rounded-full z-30 flex items-center justify-center">
-          <div className="w-[12%] aspect-square rounded-full bg-zinc-900 border border-zinc-800/50"></div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-interface MacbookProMockupProps {
-  src: string;
-  url: string;
-  alt: string;
-  className?: string;
-}
-
-function MacbookProMockup({ src, url, alt, className = "" }: MacbookProMockupProps) {
-  return (
-    <div className={`relative w-full aspect-[2812/1788] select-none ${className}`}>
-      {/* Laptop Lid (Outer Aluminum Shell) */}
-      <div className="absolute top-[8.5%] left-[11%] right-[11%] bottom-[16%] bg-[#D4D4D8] dark:bg-[#1C1917] rounded-[2%] p-[0.6%] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col justify-between overflow-hidden">
-        {/* Lid bezel border */}
-        <div className="absolute inset-0 rounded-[2%] border border-[#E4E4E7] dark:border-[#2E2A27] pointer-events-none" />
-        
-        {/* Screen Bezel (Black Border) */}
-        <div className="relative w-full h-full bg-black rounded-[1.5%] p-[1.2%] flex flex-col justify-between overflow-hidden">
-          {/* Active Screen Display Area */}
-          <div className="relative w-full h-full overflow-hidden bg-zinc-950 rounded-[0.8%] border border-zinc-900/50">
-            <img
-              src={src}
-              alt={alt}
-              className="object-cover w-full h-full"
-            />
-            {/* Screen Glare Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.06] pointer-events-none z-10" />
-          </div>
-
-          {/* Top Camera Notch */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[8%] h-[3.5%] bg-black rounded-b-[4px] z-30 flex items-center justify-center">
-            <div className="w-[10%] aspect-square rounded-full bg-zinc-900 border border-zinc-800/40"></div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Aluminum Hinge Connection */}
-      <div className="absolute bottom-[14.5%] left-[15%] right-[15%] h-[1.5%] bg-[#1c1917] dark:bg-[#0c0a09] rounded-t-sm"></div>
-      
-      {/* Keyboard Base / Deck */}
-      <div className="absolute bottom-[9.5%] left-[2%] right-[2%] h-[5%] bg-[#C3C2C0] dark:bg-[#44403C] border-t border-[#EAEAE8] dark:border-[#57534E] border-b border-[#9E9D9B] dark:border-[#2E2B28] rounded-t-[0.8%] rounded-b-[3%] shadow-2xl flex justify-center">
-        {/* Screen Opening Notch */}
-        <div className="w-[8%] h-[20%] bg-[#A8A29E] dark:bg-[#292524] rounded-b-[2px]"></div>
-      </div>
-      
-      {/* Base shadow */}
-      <div className="absolute bottom-[6%] left-[4%] right-[4%] h-[4%] bg-black/15 dark:bg-black/40 blur-md rounded-full -z-10"></div>
-    </div>
-  );
-}
-
-interface IPadProMockupProps {
-  src: string;
-  alt: string;
-  orientation?: "portrait" | "landscape";
-  className?: string;
-}
-
-function IPadProMockup({ src, alt, orientation = "portrait", className = "" }: IPadProMockupProps) {
-  const isPortrait = orientation === "portrait";
-  return (
-    <div 
-      className={`relative select-none ${className}`}
-      style={{ aspectRatio: isPortrait ? "1612/2099" : "2099/1612" }}
-    >
-      {/* iPad Outer Bezel (Aluminum Ring + Screen Border) */}
-      <div className={`absolute inset-0 bg-black rounded-[4.5%] shadow-2xl flex flex-col overflow-hidden ${isPortrait ? "p-[4.5%]" : "p-[3.5%]"}`}>
-        {/* Outer Aluminum Edge highlight */}
-        <div className="absolute inset-0 rounded-[4.5%] border border-[#3a3a3c] dark:border-[#27272a] pointer-events-none ring-[1px] ring-black/40" />
-
-        {/* Screen Area */}
-        <div className="relative w-full h-full overflow-hidden bg-zinc-950 rounded-[3%] border border-zinc-900">
-          <img
-            src={src}
-            alt={alt}
-            className="object-cover w-full h-full"
-          />
-          {/* Screen Reflection */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.07] pointer-events-none z-10" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Projects() {
   return (
@@ -183,7 +28,7 @@ export default function Projects() {
         </ScrollReveal>
       </section>
 
-      {/* 2. LegalDiff Showcase (Web App in Macbook Pro) */}
+      {/* 2. LegalDiff Showcase (Web App - Browser Layout) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
@@ -227,46 +72,64 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Visual Showcase (Macbook Pro Mockup) */}
+          {/* Visual Showcase (Browser window design) */}
           <div className="lg:col-span-7 w-full">
-            <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm flex items-center justify-center overflow-hidden">
-              <MacbookProMockup
-                src="/asset/img/Screenshot 2026-07-04 143200.png"
-                url="https://legaldiff.vn/analysis"
-                alt="Giao diện LegalDiff"
-                className="w-full relative z-10"
-              />
+            <ScrollReveal delay={200} className="relative bg-muted/20 p-3 sm:p-5 rounded-2xl border border-border/40 shadow-sm flex items-center justify-center overflow-hidden">
+              <div className="w-full bg-card border border-border/80 rounded-xl overflow-hidden shadow-card-subtle flex flex-col group/browser transition-all duration-500 hover:scale-[1.01]">
+                {/* Window Header */}
+                <div className="bg-muted/30 border-b border-border/80 px-4 py-2.5 flex items-center gap-3 shrink-0 select-none">
+                  {/* Window controls */}
+                  <div className="flex gap-1.5 shrink-0">
+                    <div className="h-2 w-2 rounded-full bg-[#FF5F56]/90 shadow-sm"></div>
+                    <div className="h-2 w-2 rounded-full bg-[#FFBD2E]/90 shadow-sm"></div>
+                    <div className="h-2 w-2 rounded-full bg-[#27C93F]/90 shadow-sm"></div>
+                  </div>
+                  {/* Address bar */}
+                  <div className="mx-auto w-1/2 bg-background/50 border border-border/60 text-[9px] sm:text-[10px] text-muted-foreground py-0.5 px-3 rounded-full text-center truncate font-mono select-all tracking-wide">
+                    https://legaldiff.vn/analysis
+                  </div>
+                </div>
+                {/* Screen */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
+                  <img
+                    src="/asset/img/Screenshot 2026-07-04 143200.png"
+                    alt="Giao diện LegalDiff"
+                    className="object-cover w-full h-full transition-transform duration-700 group-hover/browser:scale-[1.02]"
+                  />
+                  {/* Glass reflection */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.02] to-white/[0.05] pointer-events-none z-10" />
+                </div>
+              </div>
             </ScrollReveal>
           </div>
 
         </div>
       </section>
 
-      {/* 3. CareMate Showcase (Mobile App in realistic iPhone 17 Pro Max Silver) */}
+      {/* 3. CareMate Showcase (Mobile App - Staggered Card Showcase) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
-          {/* Visual Showcase (Staggered Overlapping iPhone 17 Pro Max Silver) */}
+          {/* Visual Showcase (3-Column Staggered App Screenshot Grid) */}
           <div className="lg:col-span-7 order-last lg:order-first w-full flex items-center justify-center">
-            <ScrollReveal className="relative w-full max-w-md h-[360px] sm:h-[480px] flex items-center justify-center select-none py-8 bg-muted/30 rounded-2xl border border-border/60">
-              {/* Left Phone (SOS Screen) */}
-              <IPhone17ProMaxMockup
-                src="/asset/img/Screenshot 2026-07-04 143925.png"
-                alt="SOS Screen"
-                className="absolute w-[140px] sm:w-[200px] -translate-x-[45px] sm:-translate-x-[80px] scale-[0.88] -rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
-              />
-              {/* Center Phone (Reminders) */}
-              <IPhone17ProMaxMockup
-                src="/asset/img/Screenshot 2026-07-04 144033.png"
-                alt="Reminders Screen"
-                className="absolute w-[150px] sm:w-[210px] z-20 scale-100 shadow-2xl transition-all duration-500 hover:scale-105"
-              />
-              {/* Right Phone (Diet Plan) */}
-              <IPhone17ProMaxMockup
-                src="/asset/img/Screenshot 2026-07-04 144059.png"
-                alt="Healthy Diet Screen"
-                className="absolute w-[140px] sm:w-[200px] translate-x-[45px] sm:translate-x-[80px] scale-[0.88] rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
-              />
+            <ScrollReveal className="relative w-full max-w-lg select-none py-8 px-5 bg-muted/20 rounded-2xl border border-border/40 flex items-center justify-center overflow-hidden">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 w-full">
+                {/* Left Phone Screen */}
+                <div className="relative aspect-[9/18.5] rounded-2xl overflow-hidden border border-border/80 shadow-md bg-zinc-950 group/img transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] scale-[0.92] -rotate-3 translate-x-2">
+                  <img src="/asset/img/Screenshot 2026-07-04 143925.png" alt="SOS Screen" className="object-cover w-full h-full transition-transform duration-500 group-hover/img:scale-[1.03]" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.08] pointer-events-none z-10" />
+                </div>
+                {/* Center Phone Screen */}
+                <div className="relative aspect-[9/18.5] rounded-2xl overflow-hidden border border-border/80 shadow-xl bg-zinc-950 z-20 group/img transition-all duration-500 hover:-translate-y-3 hover:scale-[1.03] -translate-y-2">
+                  <img src="/asset/img/Screenshot 2026-07-04 144033.png" alt="Reminders Screen" className="object-cover w-full h-full transition-transform duration-500 group-hover/img:scale-[1.03]" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.04] to-white/[0.1] pointer-events-none z-10" />
+                </div>
+                {/* Right Phone Screen */}
+                <div className="relative aspect-[9/18.5] rounded-2xl overflow-hidden border border-border/80 shadow-md bg-zinc-950 group/img transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] scale-[0.92] rotate-3 -translate-x-2">
+                  <img src="/asset/img/Screenshot 2026-07-04 144059.png" alt="Healthy Diet Screen" className="object-cover w-full h-full transition-transform duration-500 group-hover/img:scale-[1.03]" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.08] pointer-events-none z-10" />
+                </div>
+              </div>
             </ScrollReveal>
           </div>
 
@@ -313,7 +176,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 4. Ethnosoul Legacy (Macbook Pro + iPad Pro Landscape) */}
+      {/* 4. Ethnosoul Legacy (Artistic Storytelling Collage) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
@@ -357,23 +220,20 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Visual Showcase (Macbook Pro + iPad Pro Landscape Collage) */}
-          <div className="lg:col-span-7 w-full pb-8">
-            <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
-              {/* Macbook Pro Mockup */}
-              <MacbookProMockup
-                src="/asset/img/ethnosoul_legacy_01.png"
-                url="https://ethnosoul.vn/legacy"
-                alt="Ethnosoul Legacy Home"
-                className="w-[85%] -translate-x-6 relative z-10"
-              />
-              {/* iPad Pro Landscape Mockup overlapping bottom right */}
-              <div className="absolute bottom-[8%] right-[8%] w-[48%] z-20 shadow-2xl scale-95 hover:scale-100 transition-transform duration-500">
-                <IPadProMockup
-                  src="/asset/img/ethnosoul_legacy_02.png"
-                  alt="Ethnosoul Legacy Story"
-                  orientation="landscape"
-                />
+          {/* Visual Showcase (Landscape Clean overlapping collage) */}
+          <div className="lg:col-span-7 w-full">
+            <ScrollReveal delay={200} className="relative bg-muted/20 p-4 sm:p-6 rounded-2xl border border-border/40 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
+              {/* Primary Landscape Image */}
+              <div className="w-[82%] -translate-x-6 relative z-10 rounded-xl overflow-hidden border border-border/80 shadow-lg group/es1 transition-all duration-500 hover:scale-[1.01]">
+                <img src="/asset/img/ethnosoul_legacy_01.png" alt="Ethnosoul Legacy Home" className="object-cover w-full h-full transition-transform duration-700 group-hover/es1:scale-[1.02]" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.02] to-white/[0.06] pointer-events-none z-10" />
+              </div>
+              {/* Secondary Overlapping Landscape Image */}
+              <div className="absolute bottom-[10%] right-[8%] w-[45%] z-20 shadow-2xl rounded-xl overflow-hidden border border-border/90 group/es2 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1">
+                <div className="aspect-[4/3] w-full">
+                  <img src="/asset/img/ethnosoul_legacy_02.png" alt="Ethnosoul Legacy Story" className="object-cover w-full h-full transition-transform duration-700 group-hover/es2:scale-[1.02]" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.07] pointer-events-none z-10" />
               </div>
             </ScrollReveal>
           </div>
@@ -381,27 +241,24 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 5. School LMS Showcase (Macbook Pro + iPad Pro Portrait) */}
+      {/* 5. School LMS Showcase (Education Platform Collage) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
-          {/* Visual Showcase (Macbook Pro + iPad Pro Portrait Collage) */}
-          <div className="lg:col-span-7 order-last lg:order-first w-full pb-8">
-            <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
-              {/* Macbook Pro Mockup */}
-              <MacbookProMockup
-                src="/asset/img/school_lms_01.png"
-                url="https://schoollms.edu.vn/dashboard"
-                alt="School LMS Dashboard"
-                className="w-[82%] -translate-x-8 -translate-y-4 relative z-10"
-              />
-              {/* iPad Pro Portrait Mockup overlapping bottom right */}
-              <div className="absolute bottom-[4%] right-[8%] w-[34%] z-20 shadow-2xl scale-95 hover:scale-100 transition-transform duration-500">
-                <IPadProMockup
-                  src="/asset/img/school_lms_02.png"
-                  alt="School LMS Mobile Courses"
-                  orientation="portrait"
-                />
+          {/* Visual Showcase (Clean overlapping collage) */}
+          <div className="lg:col-span-7 order-last lg:order-first w-full">
+            <ScrollReveal delay={200} className="relative bg-muted/20 p-4 sm:p-6 rounded-2xl border border-border/40 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
+              {/* Primary Landscape Image */}
+              <div className="w-[80%] -translate-x-8 -translate-y-4 relative z-10 rounded-xl overflow-hidden border border-border/80 shadow-lg group/lms1 transition-all duration-500 hover:scale-[1.01]">
+                <img src="/asset/img/school_lms_01.png" alt="School LMS Dashboard" className="object-cover w-full h-full transition-transform duration-700 group-hover/lms1:scale-[1.02]" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.02] to-white/[0.06] pointer-events-none z-10" />
+              </div>
+              {/* Secondary Overlapping Portrait Image */}
+              <div className="absolute bottom-[6%] right-[8%] w-[32%] z-20 shadow-2xl rounded-xl overflow-hidden border border-border/90 group/lms2 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1">
+                <div className="aspect-[3/4] w-full">
+                  <img src="/asset/img/school_lms_02.png" alt="School LMS Mobile Courses" className="object-cover w-full h-full transition-transform duration-700 group-hover/lms2:scale-[1.02]" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.07] pointer-events-none z-10" />
               </div>
             </ScrollReveal>
           </div>
