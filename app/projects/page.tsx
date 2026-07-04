@@ -47,43 +47,28 @@ interface IPhone17ProMaxMockupProps {
 
 function IPhone17ProMaxMockup({ src, alt, className = "" }: IPhone17ProMaxMockupProps) {
   return (
-    <div className={`relative w-[230px] aspect-[421/852] bg-[#CCCBC9] rounded-[48px] border border-[#B8B7B5] shadow-2xl transition-all duration-500 hover:shadow-primary/10 select-none ${className}`}>
+    <div className={`relative aspect-[421/852] bg-[#E4E4E7] dark:bg-[#18181B] rounded-[11.5%] p-[1.5%] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] transition-all duration-500 hover:shadow-primary/10 select-none ${className}`}>
+      {/* Outer steel band highlight */}
+      <div className="absolute inset-0 rounded-[11.5%] border border-[#D4D4D8] dark:border-[#27272A] pointer-events-none" />
       
-      {/* Frame Accents (Silver antenna bands) */}
-      <div className="absolute top-0 left-[75.5%] w-[10px] h-[4px] bg-black/25"></div>
-      <div className="absolute bottom-0 left-[22.1%] w-[10px] h-[4px] bg-black/25"></div>
-      <div className="absolute left-0 top-[10.5%] w-[4px] h-[10px] bg-black/25"></div>
-      <div className="absolute right-0 top-[10.5%] w-[4px] h-[10px] bg-black/25"></div>
-      <div className="absolute left-0 top-[88.2%] w-[4px] h-[10px] bg-black/25"></div>
-      <div className="absolute right-0 top-[88.2%] w-[4px] h-[10px] bg-black/25"></div>
-      
-      {/* Side Buttons (Silver) */}
-      <div className="absolute left-[-2px] top-[18.78%] w-[2.5px] h-[33px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
-      <div className="absolute left-[-2px] top-[25.9%] w-[2.5px] h-[63px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
-      <div className="absolute left-[-2px] top-[35.2%] w-[2.5px] h-[63px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
-      <div className="absolute right-[-2px] top-[31.2%] w-[2.5px] h-[100px] bg-[#CCCBC9] border border-black/10 rounded-l-sm"></div>
-
-      {/* Screen Border (Black Inner Bezel) */}
-      <div className="absolute top-[6px] bottom-[6px] left-[9px] right-[9px] bg-black rounded-[42px] overflow-hidden flex flex-col justify-between">
-        
-        {/* Screen Display Area (within the bezel) */}
-        <div className="absolute top-[14px] bottom-[14px] left-[14px] right-[14px] bg-zinc-950 rounded-[30px] overflow-hidden relative">
+      {/* Black Bezel container */}
+      <div className="relative w-full h-full bg-black rounded-[10%] p-[2.5%] overflow-hidden flex flex-col">
+        {/* Screen Glass Panel */}
+        <div className="relative w-full h-full bg-zinc-950 rounded-[8.5%] overflow-hidden">
           <img
             src={src}
             alt={alt}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full transition-transform duration-700 hover:scale-[1.02]"
           />
-          {/* Glass glare reflection */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/3 to-white/6 pointer-events-none z-10" />
+          {/* Glass Reflection */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.04] to-white/[0.1] pointer-events-none z-10" />
         </div>
 
-        {/* Dynamic Island (Pill Shape) */}
-        <div className="absolute top-[24px] left-[50%] -translate-x-1/2 w-[110px] h-[30px] bg-black rounded-[15px] z-30 flex items-center justify-between px-3">
-          {/* Camera element inside Dynamic Island */}
-          <div className="w-[10px] h-[10px] rounded-full bg-white/10 ml-auto mr-1 border border-white/5"></div>
+        {/* Dynamic Island */}
+        <div className="absolute top-[4.5%] left-1/2 -translate-x-1/2 w-[28%] h-[3.5%] bg-black rounded-full z-30 flex items-center justify-center">
+          <div className="w-[12%] aspect-square rounded-full bg-zinc-900 border border-zinc-800/50"></div>
         </div>
       </div>
-      
     </div>
   );
 }
@@ -99,37 +84,41 @@ function MacbookProMockup({ src, url, alt, className = "" }: MacbookProMockupPro
   return (
     <div className={`relative w-full aspect-[2812/1788] select-none ${className}`}>
       {/* Laptop Lid (Outer Aluminum Shell) */}
-      <div className="absolute top-[8.5%] left-[11%] right-[11%] bottom-[16%] bg-black rounded-2xl border-[4px] border-[#C3C2C0] shadow-2xl flex flex-col justify-between overflow-hidden">
-        {/* Top Camera Notch */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-b-md z-30 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-zinc-800"></div>
-        </div>
+      <div className="absolute top-[8.5%] left-[11%] right-[11%] bottom-[16%] bg-[#D4D4D8] dark:bg-[#1C1917] rounded-[2%] p-[0.6%] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col justify-between overflow-hidden">
+        {/* Lid bezel border */}
+        <div className="absolute inset-0 rounded-[2%] border border-[#E4E4E7] dark:border-[#2E2A27] pointer-events-none" />
         
-        {/* Screen Display Area (exactly 16:10 aspect ratio inside the bezels) */}
-        <div className="w-full h-full p-2 relative bg-black">
-          <div className="relative w-full h-full overflow-hidden bg-zinc-950 border border-zinc-900">
+        {/* Screen Bezel (Black Border) */}
+        <div className="relative w-full h-full bg-black rounded-[1.5%] p-[1.2%] flex flex-col justify-between overflow-hidden">
+          {/* Active Screen Display Area */}
+          <div className="relative w-full h-full overflow-hidden bg-zinc-950 rounded-[0.8%] border border-zinc-900/50">
             <img
               src={src}
               alt={alt}
               className="object-cover w-full h-full"
             />
             {/* Screen Glare Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/2 to-white/4 pointer-events-none z-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.06] pointer-events-none z-10" />
+          </div>
+
+          {/* Top Camera Notch */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[8%] h-[3.5%] bg-black rounded-b-[4px] z-30 flex items-center justify-center">
+            <div className="w-[10%] aspect-square rounded-full bg-zinc-900 border border-zinc-800/40"></div>
           </div>
         </div>
       </div>
       
       {/* Aluminum Hinge Connection */}
-      <div className="absolute bottom-[14.5%] left-[15%] right-[15%] h-[1.5%] bg-[#1a1a1a] rounded-t-sm"></div>
+      <div className="absolute bottom-[14.5%] left-[15%] right-[15%] h-[1.5%] bg-[#1c1917] dark:bg-[#0c0a09] rounded-t-sm"></div>
       
       {/* Keyboard Base / Deck */}
-      <div className="absolute bottom-[9.5%] left-[2%] right-[2%] h-[5%] bg-[#C3C2C0] border-t border-[#DEDDDC] border-b border-[#9E9D9B] rounded-t-[6px] rounded-b-[24px] shadow-2xl flex justify-center">
+      <div className="absolute bottom-[9.5%] left-[2%] right-[2%] h-[5%] bg-[#C3C2C0] dark:bg-[#44403C] border-t border-[#EAEAE8] dark:border-[#57534E] border-b border-[#9E9D9B] dark:border-[#2E2B28] rounded-t-[0.8%] rounded-b-[3%] shadow-2xl flex justify-center">
         {/* Screen Opening Notch */}
-        <div className="w-20 h-2 bg-[#9E9D9B] rounded-b-md"></div>
+        <div className="w-[8%] h-[20%] bg-[#A8A29E] dark:bg-[#292524] rounded-b-[2px]"></div>
       </div>
       
       {/* Base shadow */}
-      <div className="absolute bottom-[6%] left-[4%] right-[4%] h-[4%] bg-black/15 blur-md rounded-full -z-10"></div>
+      <div className="absolute bottom-[6%] left-[4%] right-[4%] h-[4%] bg-black/15 dark:bg-black/40 blur-md rounded-full -z-10"></div>
     </div>
   );
 }
@@ -149,25 +138,19 @@ function IPadProMockup({ src, alt, orientation = "portrait", className = "" }: I
       style={{ aspectRatio: isPortrait ? "1612/2099" : "2099/1612" }}
     >
       {/* iPad Outer Bezel (Aluminum Ring + Screen Border) */}
-      <div className="absolute inset-0 bg-black rounded-[36px] border-[5px] border-[#3a3a3c] ring-[1px] ring-black/40 shadow-2xl flex flex-col overflow-hidden">
+      <div className={`absolute inset-0 bg-black rounded-[4.5%] shadow-2xl flex flex-col overflow-hidden ${isPortrait ? "p-[4.5%]" : "p-[3.5%]"}`}>
+        {/* Outer Aluminum Edge highlight */}
+        <div className="absolute inset-0 rounded-[4.5%] border border-[#3a3a3c] dark:border-[#27272a] pointer-events-none ring-[1px] ring-black/40" />
+
         {/* Screen Area */}
-        <div 
-          className="absolute overflow-hidden bg-zinc-950 border border-zinc-900"
-          style={{
-            left: isPortrait ? "4.65%" : "3.74%",
-            right: isPortrait ? "4.65%" : "3.74%",
-            top: isPortrait ? "3.74%" : "4.65%",
-            bottom: isPortrait ? "3.74%" : "4.65%",
-            borderRadius: "24px",
-          }}
-        >
+        <div className="relative w-full h-full overflow-hidden bg-zinc-950 rounded-[3%] border border-zinc-900">
           <img
             src={src}
             alt={alt}
             className="object-cover w-full h-full"
           />
           {/* Screen Reflection */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/2 to-white/4 pointer-events-none z-10" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/[0.03] to-white/[0.07] pointer-events-none z-10" />
         </div>
       </div>
     </div>
@@ -189,7 +172,7 @@ export default function Projects() {
         
         <ScrollReveal delay={150} duration={800}>
           <h1 className="font-display text-4xl font-light tracking-tight text-foreground sm:text-6xl max-w-4xl mx-auto text-balance leading-[1.1]">
-            Chế tác giao diện đạt tiêu chuẩn <span className="text-primary italic font-serif">Mỹ thuật & Kỹ thuật</span>
+            Chế tác giao diện đạt tiêu chuẩn <span className="text-primary italic">Mỹ thuật & Kỹ thuật</span>
           </h1>
         </ScrollReveal>
 
@@ -217,16 +200,16 @@ export default function Projects() {
             </div>
 
             <div className="space-y-4 font-sans text-sm text-foreground/80">
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">01</span>
                 <span>Highlight chi tiết các dòng sửa đổi, xóa bỏ hoặc thêm mới tức thời.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">02</span>
                 <span>Tự động kết xuất báo cáo sai khác dưới dạng file PDF/Docx bảo mật.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">03</span>
                 <span>Hạ tầng đám mây cho phép tải lên cùng lúc nhiều tập tài liệu dung lượng lớn.</span>
               </p>
             </div>
@@ -265,24 +248,24 @@ export default function Projects() {
           
           {/* Visual Showcase (Staggered Overlapping iPhone 17 Pro Max Silver) */}
           <div className="lg:col-span-7 order-last lg:order-first w-full flex items-center justify-center">
-            <ScrollReveal className="relative w-full max-w-md h-[480px] flex items-center justify-center select-none py-8 bg-muted/30 rounded-2xl border border-border/60">
+            <ScrollReveal className="relative w-full max-w-md h-[360px] sm:h-[480px] flex items-center justify-center select-none py-8 bg-muted/30 rounded-2xl border border-border/60">
               {/* Left Phone (SOS Screen) */}
               <IPhone17ProMaxMockup
                 src="/asset/img/Screenshot 2026-07-04 143925.png"
                 alt="SOS Screen"
-                className="absolute -translate-x-20 scale-[0.88] -rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
+                className="absolute w-[140px] sm:w-[200px] -translate-x-[45px] sm:-translate-x-[80px] scale-[0.88] -rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
               />
               {/* Center Phone (Reminders) */}
               <IPhone17ProMaxMockup
                 src="/asset/img/Screenshot 2026-07-04 144033.png"
                 alt="Reminders Screen"
-                className="absolute z-20 scale-100 shadow-2xl transition-all duration-500 hover:scale-105"
+                className="absolute w-[150px] sm:w-[210px] z-20 scale-100 shadow-2xl transition-all duration-500 hover:scale-105"
               />
               {/* Right Phone (Diet Plan) */}
               <IPhone17ProMaxMockup
                 src="/asset/img/Screenshot 2026-07-04 144059.png"
                 alt="Healthy Diet Screen"
-                className="absolute translate-x-20 scale-[0.88] rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
+                className="absolute w-[140px] sm:w-[200px] translate-x-[45px] sm:translate-x-[80px] scale-[0.88] rotate-6 z-10 opacity-80 transition-all duration-500 hover:z-30 hover:scale-100 hover:rotate-0 hover:opacity-100"
               />
             </ScrollReveal>
           </div>
@@ -300,16 +283,16 @@ export default function Projects() {
             </div>
 
             <div className="space-y-4 font-sans text-sm text-foreground/80">
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">01</span>
                 <span>Phát tín hiệu SOS khẩn cấp tới bác sĩ gia đình qua kết nối một chạm.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">02</span>
                 <span>Đạt chứng nhận bảo mật dữ liệu sức khỏe HIPAA, an tâm lưu trữ thông tin.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">03</span>
                 <span>Tùy chỉnh lịch trình dùng thuốc nâng cao và tự động hóa cảnh báo liều lượng.</span>
               </p>
             </div>
@@ -347,16 +330,16 @@ export default function Projects() {
             </div>
 
             <div className="space-y-4 font-sans text-sm text-foreground/80">
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">01</span>
                 <span>Tương tác 3D mượt mà tái hiện sinh động từng thớ sợi, hoa văn dệt tay thổ cẩm.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">02</span>
                 <span>Hành trình kể chuyện nghệ thuật dẫn dắt độc giả trải nghiệm nguồn gốc lịch sử di sản.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-primary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-primary text-base font-semibold shrink-0">03</span>
                 <span>Thiết kế tối ưu hóa chuyển động tinh xảo và tốc độ tải trang ấn tượng.</span>
               </p>
             </div>
@@ -436,16 +419,16 @@ export default function Projects() {
             </div>
 
             <div className="space-y-4 font-sans text-sm text-foreground/80">
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">01</span>
                 <span>Bảng điều khiển trực quan giúp học sinh dễ dàng nắm bắt lịch học, deadline.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">02</span>
                 <span>Công cụ chấm điểm bài viết bằng AI và kết xuất thống kê báo cáo tiến bộ.</span>
               </p>
-              <p className="flex items-start gap-3">
-                <span className="text-secondary mt-1">—</span>
+              <p className="flex items-start gap-4">
+                <span className="font-display italic text-secondary text-base font-semibold shrink-0">03</span>
                 <span>Hỗ trợ giáo viên xây dựng giáo án điện tử đa phương tiện thông minh.</span>
               </p>
             </div>
