@@ -21,32 +21,32 @@ We map our theme variables in `app/globals.css` to these values:
 
 ```css
 @theme inline {
-  /* Surface Palette (Cool Slate & Chalk) */
-  --background: oklch(0.985 0.002 240);       /* Soft chalk white background (#FAFBFB) */
-  --foreground: oklch(0.16 0.01 240);         /* Deep graphite black text (#12161A) */
+  /* Surface Palette (Warm Plaster & Cream) */
+  --background: oklch(0.985 0.004 70);       /* Soft paper-cream background (#FAF8F5) */
+  --foreground: oklch(0.24 0.01 70);         /* Deep graphite near-black text (#22201E) */
   
-  --card: oklch(1 0 0);                       /* Crisp white card background */
-  --card-foreground: oklch(0.16 0.01 240);
+  --card: oklch(1 0 0 / 0.85);               /* Translucent white card with glass blur */
+  --card-foreground: oklch(0.24 0.01 70);
   
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.01 240);
+  --popover: oklch(1 0 0 / 0.85);
+  --popover-foreground: oklch(0.24 0.01 70);
 
   /* Brand Accents */
-  --primary: oklch(0.38 0.18 260);           /* Premium Cobalt Blue (#1044B5) */
-  --primary-foreground: oklch(0.985 0.002 240);
+  --primary: oklch(0.48 0.11 35);           /* Terracotta / Burnt Copper (#B0503B) */
+  --primary-foreground: oklch(0.985 0.004 70);
 
-  --secondary: oklch(0.28 0.04 220);         /* Deep Steel/Slate Blue (#223A47) */
-  --secondary-foreground: oklch(0.985 0.002 240);
+  --secondary: oklch(0.42 0.06 140);         /* Refined Sage/Olive Green (#2E483E) */
+  --secondary-foreground: oklch(0.985 0.004 70);
 
-  --muted: oklch(0.95 0.005 240);            /* Soft Slate translucent gray (#F1F3F6) */
-  --muted-foreground: oklch(0.48 0.015 240);  /* Muted slate gray label text (#687180) */
+  --muted: oklch(0.965 0.005 70 / 0.7);      /* Sandstone translucent gray */
+  --muted-foreground: oklch(0.52 0.01 70);   /* Muted taupe gray label text (#827E7A) */
 
-  --accent: oklch(0.92 0.015 260 / 0.3);     /* Soft cobalt highlights */
-  --accent-foreground: oklch(0.38 0.18 260);
+  --accent: oklch(0.94 0.015 140 / 0.5);     /* Soft sage highlights */
+  --accent-foreground: oklch(0.24 0.01 70);
 
-  --border: oklch(0.90 0.006 240 / 0.8);     /* Thin elegant hairline border (#E2E5E9) */
-  --input: oklch(0.95 0.005 240);
-  --ring: oklch(0.38 0.18 260);              /* Cobalt focus ring */
+  --border: oklch(0.91 0.006 70 / 0.6);      /* Soft warm-gray border (#E6E1DC) */
+  --input: oklch(0.965 0.005 70);
+  --ring: oklch(0.48 0.11 35);              /* Terracotta focus ring */
 
   /* Structural Radius scale (Not bubbly) */
   --radius-outer: 16px;                     /* Re-proportioned radius */
