@@ -138,9 +138,9 @@ export default function PartnersPage() {
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}
-              className="bg-muted/50 border border-border p-2 rounded-[24px] flex flex-col justify-between"
+              className="bg-muted/50 border border-border p-2 rounded-2xl flex flex-col justify-between"
             >
-              <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle flex flex-col justify-between h-full space-y-6">
+              <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle flex flex-col justify-between h-full space-y-6">
                 <div className="space-y-4">
                   {/* Rating & Quote Icon */}
                   <div className="flex justify-between items-center">

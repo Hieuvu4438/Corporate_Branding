@@ -105,15 +105,15 @@ export default function CaseStudiesPage() {
           </div>
 
           {/* Slider Container */}
-          <div className="bg-muted/50 border border-border p-2 rounded-[24px] max-w-4xl mx-auto shadow-card-subtle">
+          <div className="bg-muted/50 border border-border p-2 rounded-2xl max-w-4xl mx-auto shadow-card-subtle">
             <div 
               ref={sliderRef}
-              className="relative w-full aspect-[16/9] rounded-[18px] overflow-hidden select-none cursor-ew-resize border border-border/40"
+              className="relative w-full aspect-[16/9] rounded-xl overflow-hidden select-none cursor-ew-resize border border-border/40"
             >
               {/* After: New Design (Background) */}
               <div className="absolute inset-0 bg-background flex flex-col justify-center items-center text-center p-8">
-                <div className="max-w-md w-full bg-muted border border-border p-2 rounded-[24px] shadow-lg backdrop-blur-md">
-                  <div className="bg-card border border-white/5 p-6 rounded-[18px] space-y-4 text-left backdrop-blur-lg">
+                <div className="max-w-md w-full bg-muted border border-border p-2 rounded-2xl shadow-lg backdrop-blur-md">
+                  <div className="bg-card border border-white/5 p-6 rounded-xl space-y-4 text-left backdrop-blur-lg">
                     <div className="flex items-center space-x-2 text-primary">
                       <Star className="h-4 w-4 fill-primary" />
                       <span className="text-[10px] font-bold uppercase tracking-wider">Phiên bản mới 2026</span>
@@ -213,7 +213,7 @@ export default function CaseStudiesPage() {
               <p className="text-base text-muted-foreground leading-relaxed">
                 Bài toán lớn nhất đặt ra là làm thế nào để hiển thị sự khác biệt giữa hai văn bản có độ dài hàng trăm trang mà không gây mỏi mắt cho chuyên viên pháp lý. Đồng thời, cấu trúc dữ liệu lưu trữ cần tuân thủ bảo mật tuyệt đối, ngăn chặn tình trạng rò rỉ các hợp đồng mua bán sáp nhập lớn lên các máy chủ bên ngoài trong suốt tiến trình so sánh văn bản chéo.
               </p>
-              <div className="bg-accent/40 border border-secondary/15 p-5 rounded-[18px] flex items-start gap-4">
+              <div className="bg-accent/40 border border-secondary/15 p-5 rounded-xl flex items-start gap-4">
                 <ShieldAlert className="h-6 w-6 text-secondary shrink-0 mt-0.5" />
                 <p className="text-sm text-foreground/80 leading-relaxed">
                   <strong>Rủi ro cao:</strong> Chậm trễ trong việc phản hồi sai sót ở các điều khoản phạt trong hợp đồng có thể gây thiệt hại hàng triệu USD cho đối tác B2B.
@@ -238,11 +238,11 @@ export default function CaseStudiesPage() {
                 Quy trình bao gồm 4 giai đoạn nối tiếp:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-                <div className="bg-muted/40 border border-border p-5 rounded-[18px] space-y-2">
+                <div className="bg-muted/40 border border-border p-5 rounded-xl space-y-2">
                   <h4 className="font-bold text-foreground text-sm flex gap-2"><span className="text-primary font-display font-bold">P1</span> UX Auditing & Prototyping</h4>
                   <p className="text-xs text-muted-foreground leading-relaxed">Phỏng vấn sâu 20 luật sư của các tập đoàn đối tác để xác lập sơ đồ nhiệt của hành trình đọc văn bản.</p>
                 </div>
-                <div className="bg-muted/40 border border-border p-5 rounded-[18px] space-y-2">
+                <div className="bg-muted/40 border border-border p-5 rounded-xl space-y-2">
                   <h4 className="font-bold text-foreground text-sm flex gap-2"><span className="text-primary font-display font-bold">P2</span> Local Diff Engine Coding</h4>
                   <p className="text-xs text-muted-foreground leading-relaxed">Lập trình thuật toán so sánh văn bản song song trên luồng Web Workers của trình duyệt để tối đa tốc độ kết xuất.</p>
                 </div>
@@ -259,20 +259,20 @@ export default function CaseStudiesPage() {
 
               {/* Stats Cards (Double Bezel) */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-                <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-                  <div className="bg-card border border-border/40 p-6 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+                <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+                  <div className="bg-card border border-border/40 p-6 rounded-xl text-center space-y-2 shadow-card-subtle">
                     <span className="text-3xl font-display font-bold text-primary">70%</span>
                     <p className="text-xs text-muted-foreground">Tiết kiệm thời gian rà soát</p>
                   </div>
                 </div>
-                <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-                  <div className="bg-card border border-border/40 p-6 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+                <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+                  <div className="bg-card border border-border/40 p-6 rounded-xl text-center space-y-2 shadow-card-subtle">
                     <span className="text-3xl font-display font-bold text-primary">&lt;1%</span>
                     <p className="text-xs text-muted-foreground">Tỷ lệ sai sót điều khoản phạt</p>
                   </div>
                 </div>
-                <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-                  <div className="bg-card border border-border/40 p-6 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+                <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+                  <div className="bg-card border border-border/40 p-6 rounded-xl text-center space-y-2 shadow-card-subtle">
                     <span className="text-3xl font-display font-bold text-primary">100%</span>
                     <p className="text-xs text-muted-foreground">Độ bảo mật dữ liệu đầu-cuối</p>
                   </div>
@@ -280,8 +280,8 @@ export default function CaseStudiesPage() {
               </div>
 
               {/* Client Testimonial */}
-              <div className="bg-muted/50 border border-border p-2 rounded-[24px] mt-8">
-                <div className="bg-card border border-border/40 p-8 rounded-[18px] shadow-card-subtle space-y-4">
+              <div className="bg-muted/50 border border-border p-2 rounded-2xl mt-8">
+                <div className="bg-card border border-border/40 p-8 rounded-xl shadow-card-subtle space-y-4">
                   <div className="h-8 w-8 text-secondary/30"><Quote className="h-full w-full" /></div>
                   <p className="text-sm italic text-muted-foreground leading-relaxed">
                     &quot;HopeRise đã không chỉ đem lại một diện mạo mới cho LegalDiff mà còn giúp tối ưu thuật toán xử lý dữ liệu ngay tại máy khách. Đây là bước đột phá trong hành trình cung cấp giải pháp an tâm tuyệt đối của chúng tôi.&quot;

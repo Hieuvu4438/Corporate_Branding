@@ -116,7 +116,7 @@ export default function ResourcesPage() {
       {/* Main Library Dashboard */}
       <section className="py-20 lg:py-28 mx-auto max-w-7xl px-6 lg:px-8 w-full space-y-12">
         {/* Search Bar & Filters */}
-        <div className="bg-muted/30 border border-border/60 p-6 rounded-[24px] space-y-6">
+        <div className="bg-muted/30 border border-border/60 p-6 rounded-2xl space-y-6">
           {/* Search input */}
           <div className="relative max-w-xl mx-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -175,9 +175,9 @@ export default function ResourcesPage() {
             filteredResources.map((res) => (
               <div
                 key={res.id}
-                className="bg-muted/50 border border-border p-2 rounded-[24px] flex flex-col justify-between hover:border-primary/20 transition-colors duration-300"
+                className="bg-muted/50 border border-border p-2 rounded-2xl flex flex-col justify-between hover:border-primary/20 transition-colors duration-300"
               >
-                <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle flex flex-col justify-between h-[380px] relative">
+                <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle flex flex-col justify-between h-[380px] relative">
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <div className="h-9 w-9 rounded-full bg-accent flex items-center justify-center text-primary border border-primary/5">
@@ -229,8 +229,8 @@ export default function ResourcesPage() {
       {/* Gated Registration Dialog for Downloads */}
       {selectedRes && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-card w-full max-w-md rounded-[24px] border border-border p-2 shadow-2xl relative animate-scale-up">
-            <div className="bg-background border border-border/40 p-6 rounded-[18px] space-y-6">
+          <div className="bg-card w-full max-w-md rounded-2xl border border-border p-2 shadow-2xl relative animate-scale-up">
+            <div className="bg-background border border-border/40 p-6 rounded-xl space-y-6">
               {/* Header */}
               <div className="flex justify-between items-start gap-4">
                 <div className="space-y-1">

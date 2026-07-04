@@ -45,9 +45,9 @@ export function EcommerceCard({
 
   return (
     /* Outer Shell: Bezel base */
-    <div className="bg-muted/50 border border-border p-2 rounded-[24px] group transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1">
+    <div className="bg-muted/50 border border-border p-2 rounded-2xl group transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1">
       {/* Inner Core */}
-      <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle flex flex-col h-full justify-between space-y-5">
+      <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle flex flex-col h-full justify-between space-y-5">
         {/* Product Visual Container */}
         <div className="relative aspect-[3/4] w-full rounded-[12px] overflow-hidden bg-muted border border-border/30">
           <Image

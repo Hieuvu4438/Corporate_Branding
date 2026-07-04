@@ -5,14 +5,14 @@ import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const fontDisplay = Cormorant_Garamond({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   variable: "--font-display",
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
 const fontSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
 });

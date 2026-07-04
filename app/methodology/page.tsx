@@ -107,8 +107,8 @@ export default function MethodologyPage() {
             <p className="text-sm text-muted-foreground">Kéo thanh trượt để thay đổi quy mô và xem ước tính thời gian thực hiện của từng giai đoạn.</p>
           </div>
 
-          <div className="bg-muted/50 border border-border p-2 rounded-[24px] max-w-2xl mx-auto shadow-card-subtle">
-            <div className="bg-card border border-border/40 p-6 rounded-[18px] space-y-6 text-left">
+          <div className="bg-muted/50 border border-border p-2 rounded-2xl max-w-2xl mx-auto shadow-card-subtle">
+            <div className="bg-card border border-border/40 p-6 rounded-xl space-y-6 text-left">
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-semibold">
                   <span className="text-muted-foreground">Quy mô dự kiến:</span>
@@ -172,8 +172,8 @@ export default function MethodologyPage() {
 
                 {/* Content Card (Double-Bezel) */}
                 <div className="w-full md:w-[calc(50%-24px)] ml-12 md:ml-0">
-                  <div className="bg-muted/50 border border-border p-2 rounded-[24px] hover:border-primary/30 transition-all duration-300">
-                    <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle space-y-4">
+                  <div className="bg-muted/50 border border-border p-2 rounded-2xl hover:border-primary/30 transition-all duration-300">
+                    <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle space-y-4">
                       <div className="flex items-center gap-3">
                         <div className="h-9 w-9 rounded-full bg-accent flex items-center justify-center text-primary">
                           <Icon className="h-5 w-5" />

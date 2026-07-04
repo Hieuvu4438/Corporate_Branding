@@ -248,8 +248,8 @@ export default function EcommerceShowcase() {
               />
 
               {/* Cart Drawer Indicator Card */}
-              <div className="bg-muted border border-border p-2 rounded-[24px]">
-                <div className="bg-card border border-border/40 p-6 rounded-[18px] text-left space-y-4">
+              <div className="bg-muted border border-border p-2 rounded-2xl">
+                <div className="bg-card border border-border/40 p-6 rounded-xl text-left space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="font-display font-bold text-foreground">Giỏ hàng của bạn</span>
                     <span className="bg-primary/10 text-primary text-xs font-bold px-2.5 py-0.5 rounded-full">
@@ -400,8 +400,8 @@ export default function EcommerceShowcase() {
             </div>
 
             {/* Right Document Display Core (Grid Span 8) - Double-Bezel layout */}
-            <div className="lg:col-span-8 bg-muted/40 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-8 sm:p-10 rounded-[18px] shadow-card-subtle space-y-6">
+            <div className="lg:col-span-8 bg-muted/40 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-8 sm:p-10 rounded-xl shadow-card-subtle space-y-6">
                 <div className="space-y-2 pb-4 border-b border-border/60">
                   <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
                     {docsData[selectedDocIndex].title}

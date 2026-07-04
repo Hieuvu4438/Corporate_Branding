@@ -68,32 +68,32 @@ export default function ConstructionPage() {
       <section className="py-12 bg-muted/20 border-b border-border/80">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-5 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+            <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-5 rounded-xl text-center space-y-2 shadow-card-subtle">
                 <HardHat className="h-6 w-6 text-primary mx-auto" />
                 <span className="block text-2xl font-bold text-foreground">227 Nhân sự</span>
                 <p className="text-xs text-muted-foreground">Đang tích cực thi công hôm nay</p>
               </div>
             </div>
 
-            <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-5 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+            <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-5 rounded-xl text-center space-y-2 shadow-card-subtle">
                 <Navigation className="h-6 w-6 text-primary mx-auto" />
                 <span className="block text-2xl font-bold text-foreground">18 Thiết bị</span>
                 <p className="text-xs text-muted-foreground">Cẩu tháp, máy xúc, xe bơm active</p>
               </div>
             </div>
 
-            <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-5 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+            <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-5 rounded-xl text-center space-y-2 shadow-card-subtle">
                 <ShieldCheck className="h-6 w-6 text-primary mx-auto" />
                 <span className="block text-2xl font-bold text-foreground">285.000 Giờ</span>
                 <p className="text-xs text-muted-foreground">Lao động an toàn không tai nạn</p>
               </div>
             </div>
 
-            <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-5 rounded-[18px] text-center space-y-2 shadow-card-subtle">
+            <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-5 rounded-xl text-center space-y-2 shadow-card-subtle">
                 <Clock className="h-6 w-6 text-primary mx-auto" />
                 <span className="block text-2xl font-bold text-foreground">Tầng 18</span>
                 <p className="text-xs text-muted-foreground">Chiều cao kết cấu sàn Block A hiện tại</p>
@@ -120,8 +120,8 @@ export default function ConstructionPage() {
               </div>
 
               {/* Player Container */}
-              <div className="bg-muted/50 border border-border p-2 rounded-[24px] shadow-card-subtle">
-                <div className="relative aspect-[16/9] bg-zinc-950 rounded-[18px] overflow-hidden flex flex-col justify-center items-center text-center">
+              <div className="bg-muted/50 border border-border p-2 rounded-2xl shadow-card-subtle">
+                <div className="relative aspect-[16/9] bg-zinc-950 rounded-xl overflow-hidden flex flex-col justify-center items-center text-center">
                   <div className="absolute inset-0 bg-radial-gradient opacity-10" />
                   
                   {/* Camera overlay texts */}
@@ -165,8 +165,8 @@ export default function ConstructionPage() {
                 <Calendar className="h-5 w-5 text-primary" /> Tiến độ tổng thể & Gantt Chart
               </h3>
 
-              <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-                <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle space-y-4">
+              <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+                <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle space-y-4">
                   {ganttPhases.map((phase, idx) => (
                     <div 
                       key={idx} 

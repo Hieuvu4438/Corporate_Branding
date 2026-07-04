@@ -125,9 +125,9 @@ export default function TeamPage() {
             <div
               key={member.id}
               onClick={() => setSelectedMember(member)}
-              className="bg-muted/50 border border-border p-2 rounded-[24px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 group cursor-pointer"
+              className="bg-muted/50 border border-border p-2 rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 group cursor-pointer"
             >
-              <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle flex flex-col items-center text-center space-y-4 h-full relative overflow-hidden">
+              <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle flex flex-col items-center text-center space-y-4 h-full relative overflow-hidden">
                 {/* Mock Portrait Avatar (High Contrast Minimal Frame) */}
                 <div className="h-28 w-28 rounded-full bg-accent border border-primary/10 flex items-center justify-center text-primary font-display text-3xl font-extrabold select-none shadow-inner group-hover:scale-105 transition-transform duration-300">
                   {member.avatarText}

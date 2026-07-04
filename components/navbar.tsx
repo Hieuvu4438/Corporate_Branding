@@ -102,8 +102,8 @@ export function Navbar() {
               </button>
 
               {exploreOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-96 bg-card border border-border p-3 rounded-[24px] shadow-lg grid grid-cols-2 gap-2 z-50 animate-fade-in">
-                  <div className="bg-background border border-border/40 p-4 rounded-[18px] col-span-2 grid grid-cols-2 gap-2">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-96 bg-card border border-border p-3 rounded-2xl shadow-lg grid grid-cols-2 gap-2 z-50 animate-fade-in">
+                  <div className="bg-background border border-border/40 p-4 rounded-xl col-span-2 grid grid-cols-2 gap-2">
                     {exploreItems.map((item) => {
                       const isActive = pathname === item.href;
                       return (

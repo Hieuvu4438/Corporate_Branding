@@ -126,8 +126,8 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Mind Map Controls */}
             <div className="lg:col-span-5 flex flex-col space-y-4">
-              <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-                <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle space-y-4">
+              <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+                <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle space-y-4">
                   <span className="text-xs uppercase font-bold tracking-wider text-muted-foreground flex items-center gap-2">
                     <Network className="h-4 w-4 text-primary" /> Kết Nối Nỗi Đau Khách Hàng
                   </span>
@@ -163,9 +163,9 @@ export default function ServicesPage() {
                 return (
                   <div
                     key={service.id}
-                    className="bg-muted/50 border border-border p-2 rounded-[24px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] animate-fade-in"
+                    className="bg-muted/50 border border-border p-2 rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] animate-fade-in"
                   >
-                    <div className="bg-card border border-border/40 p-8 rounded-[18px] shadow-card-subtle space-y-6">
+                    <div className="bg-card border border-border/40 p-8 rounded-xl shadow-card-subtle space-y-6">
                       <div className="flex items-center gap-4">
                         <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center text-primary border border-primary/10">
                           <Icon className="h-6 w-6" />
@@ -239,7 +239,7 @@ export default function ServicesPage() {
               <div
                 key={idx}
                 className={cn(
-                  "bg-muted/50 border p-2 rounded-[24px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 relative",
+                  "bg-muted/50 border p-2 rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 relative",
                   pkg.popular ? "border-primary/50" : "border-border"
                 )}
               >
@@ -248,7 +248,7 @@ export default function ServicesPage() {
                     Phổ biến nhất
                   </span>
                 )}
-                <div className="bg-card border border-border/40 p-8 rounded-[18px] shadow-card-subtle flex flex-col justify-between h-full space-y-6">
+                <div className="bg-card border border-border/40 p-8 rounded-xl shadow-card-subtle flex flex-col justify-between h-full space-y-6">
                   <div>
                     <h3 className="font-display text-2xl font-bold text-foreground">{pkg.name}</h3>
                     <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{pkg.description}</p>
@@ -312,8 +312,8 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-            <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle space-y-4">
+          <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+            <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle space-y-4">
               {serviceFaqs.map((faq, idx) => (
                 <div key={idx} className="pb-4 border-b border-border/60 last:border-0 last:pb-0">
                   <h3 className="text-base font-bold text-foreground flex gap-2 items-start">

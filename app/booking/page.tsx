@@ -87,8 +87,8 @@ export default function BookingPage() {
         </div>
 
         {/* Distraction-free Double-Bezel Booking Module */}
-        <div className="bg-muted/50 border border-border p-2 rounded-[24px] max-w-5xl mx-auto shadow-card-subtle">
-          <div className="bg-card border border-border/40 p-6 md:p-8 rounded-[18px] grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="bg-muted/50 border border-border p-2 rounded-2xl max-w-5xl mx-auto shadow-card-subtle">
+          <div className="bg-card border border-border/40 p-6 md:p-8 rounded-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
             
             {/* Left: Input Form & Calendar (col-span-8) */}
             <div className="lg:col-span-8 space-y-8">

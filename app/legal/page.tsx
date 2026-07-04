@@ -96,8 +96,8 @@ export default function LegalPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left: Mortgage & Security Alert Widget */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="bg-muted/50 border border-border p-2 rounded-[24px]">
-              <div className="bg-card border border-border/40 p-6 rounded-[18px] shadow-card-subtle space-y-6">
+            <div className="bg-muted/50 border border-border p-2 rounded-2xl">
+              <div className="bg-card border border-border/40 p-6 rounded-xl shadow-card-subtle space-y-6">
                 <span className="text-xs uppercase font-bold tracking-wider text-secondary flex items-center gap-2">
                   <Lock className="h-4 w-4" /> Báo cáo Tình trạng sở hữu
                 </span>
@@ -204,8 +204,8 @@ export default function LegalPage() {
       {/* 3. In-Browser Document Previewer Modal */}
       {selectedDoc && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-card w-full max-w-2xl rounded-[24px] border border-border p-2 shadow-2xl relative animate-scale-up">
-            <div className="bg-background border border-border/40 p-6 rounded-[18px] space-y-6">
+          <div className="bg-card w-full max-w-2xl rounded-2xl border border-border p-2 shadow-2xl relative animate-scale-up">
+            <div className="bg-background border border-border/40 p-6 rounded-xl space-y-6">
               {/* Header */}
               <div className="flex justify-between items-start gap-4">
                 <div className="space-y-1">

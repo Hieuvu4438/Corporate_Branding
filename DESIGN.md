@@ -1,16 +1,16 @@
-# Design Guidelines: Corporate Branding & E-Commerce Showcase (Warm Editorial & Glassmorphism)
+# Design Guidelines: Corporate Branding (Cool Editorial & Cobalt Grid)
 
-This document establishes the updated color palette, typography hierarchy, double-bezel nested warm glass card layouts, nested CTAs, and custom motion guidelines. It transitions the website into an elite, award-tier digital experience, following the "Warm Editorial" and "Structural Glassmorphism" design systems.
+This document establishes the color palette, typography, structural grid layout, and custom motion guidelines for the redesigned digital experience. It transitions the website into an elite, award-tier digital experience, following the "Cool Editorial" and "Structural Grid" design systems.
 
 ---
 
 ## 1. Aesthetic Identity & Style Family
 
-- **Style Family**: **Warm Editorial & Glassmorphism**. A high-end light theme using warm paper-cream backgrounds, deep graphite near-black text, rich terracotta-copper and refined olive-green highlights, elegant display headings, and premium geometric sans-serif body text.
-- **Mood**: Elegant, warm, trustworthy, and architectural.
+- **Style Family**: **Cool Editorial & Structural Grid**. A high-end light theme using cool chalk backgrounds, deep graphite near-black text, refined cobalt blue accents, elegant display headings, and clean sans-serif body text.
+- **Mood**: Precise, editorial, trustworthy, and architectural.
 - **Design Configuration (The Dials)**:
-  * `DESIGN_VARIANCE`: 8 (Asymmetric layouts, bento structures, offset whitespace)
-  * `MOTION_INTENSITY`: 7 (Cinematic entry transitions, scale reveals, scroll triggers)
+  * `DESIGN_VARIANCE`: 9 (Asymmetric layouts, blueprint grid structures, offset whitespace)
+  * `MOTION_INTENSITY`: 5 (Restrained cinematic reveals, smooth hover transitions)
   * `VISUAL_DENSITY`: 3 (Spacious layouts, macro-whitespace, clear headers)
 
 ---
@@ -21,41 +21,39 @@ We map our theme variables in `app/globals.css` to these values:
 
 ```css
 @theme inline {
-  /* Surface Palette (Warm Cream & Chalk Glass) */
-  --background: oklch(0.985 0.004 70);       /* Soft paper-cream background (#FAF8F5) */
-  --foreground: oklch(0.24 0.01 70);         /* Deep graphite near-black text (#22201E) */
+  /* Surface Palette (Cool Slate & Chalk) */
+  --background: oklch(0.985 0.002 240);       /* Soft chalk white background (#FAFBFB) */
+  --foreground: oklch(0.16 0.01 240);         /* Deep graphite black text (#12161A) */
   
-  --card: oklch(1 0 0 / 0.85);               /* Semi-translucent white card with glass blur */
-  --card-foreground: oklch(0.24 0.01 70);
+  --card: oklch(1 0 0);                       /* Crisp white card background */
+  --card-foreground: oklch(0.16 0.01 240);
   
-  --popover: oklch(1 0 0 / 0.85);
-  --popover-foreground: oklch(0.24 0.01 70);
-  
-  /* Brand Accents (Restrained Saturation < 80%) */
-  --primary: oklch(0.48 0.11 35);           /* Terracotta / Burnt Copper (#B0503B) */
-  --primary-foreground: oklch(0.985 0.004 70);
-  
-  --secondary: oklch(0.42 0.06 140);         /* Refined Sage/Olive Green (#2E483E) */
-  --secondary-foreground: oklch(0.985 0.004 70);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.01 240);
 
-  --muted: oklch(0.965 0.005 70 / 0.7);      /* Sandstone translucent gray */
-  --muted-foreground: oklch(0.52 0.01 70);   /* Muted taupe gray label text (#827E7A) */
-  
-  --accent: oklch(0.94 0.015 140 / 0.5);     /* Soft sage highlights */
-  --accent-foreground: oklch(0.24 0.01 70);
+  /* Brand Accents */
+  --primary: oklch(0.38 0.18 260);           /* Premium Cobalt Blue (#1044B5) */
+  --primary-foreground: oklch(0.985 0.002 240);
 
-  --border: oklch(0.91 0.006 70 / 0.6);      /* Soft warm-gray border (#E6E1DC) */
-  --input: oklch(0.965 0.005 70);
-  --ring: oklch(0.48 0.11 35);              /* Terracotta focus ring */
+  --secondary: oklch(0.28 0.04 220);         /* Deep Steel/Slate Blue (#223A47) */
+  --secondary-foreground: oklch(0.985 0.002 240);
 
-  /* Machined Double-Bezel Radius scale */
-  --radius-outer: 24px;                     /* Outer rounded radius */
-  --radius-inner: 18px;                     /* Inner content container */
-  --radius-btn: 9999px;                     /* Full pill-shape buttons */
+  --muted: oklch(0.95 0.005 240);            /* Soft Slate translucent gray (#F1F3F6) */
+  --muted-foreground: oklch(0.48 0.015 240);  /* Muted slate gray label text (#687180) */
 
-  /* Soft Ambient Shadows & Blurs */
-  --shadow-card-subtle: 0 16px 40px oklch(0.24 0.01 70 / 0.03);
-  --glass-blur: blur(16px);
+  --accent: oklch(0.92 0.015 260 / 0.3);     /* Soft cobalt highlights */
+  --accent-foreground: oklch(0.38 0.18 260);
+
+  --border: oklch(0.90 0.006 240 / 0.8);     /* Thin elegant hairline border (#E2E5E9) */
+  --input: oklch(0.95 0.005 240);
+  --ring: oklch(0.38 0.18 260);              /* Cobalt focus ring */
+
+  /* Structural Radius scale (Not bubbly) */
+  --radius-outer: 16px;                     /* Re-proportioned radius */
+  --radius-inner: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 }
 ```
 
@@ -63,48 +61,35 @@ We map our theme variables in `app/globals.css` to these values:
 
 ## 3. Typography & Pairings
 
-We pair an elegant display serif with a geometric sans-serif body for a custom, bespoke feel.
-- **Display Headings (`font-display`)**: `Playfair Display` or `Cormorant Garamond` (High-contrast display serif).
-- **Body & UI Elements (`font-sans`)**: `Plus Jakarta Sans` or `Outfit` (Clean, geometric sans-serif).
+We pair an elegant display serif with a geometric sans-serif body for a custom, bespoke feel, ensuring full Vietnamese diacritic support.
+- **Display Headings (`font-display`)**: `Cormorant Garamond` (with subset `vietnamese` and `latin`).
+- **Body & UI Elements (`font-sans`)**: `Plus Jakarta Sans` (with subset `vietnamese` and `latin`).
 - **Conventions**:
   - Display title letter-spacing: `-0.02em` (`tracking-tight`) to `-0.04em` (`tracking-tighter`).
-  - H1 Hero text must NOT exceed 2 to 3 lines. Keep it wide and horizontal.
+  - H1 Hero text must NOT exceed 2 lines. Keep it wide and horizontal.
   - Italic/bold emphasis: Apply italics or bold weights of the *same* font family. Never mix serif and sans in a single word-by-word highlight.
+  - Clear descender clearance (minimum `leading-[1.1]` for display headlines with italic descenders to prevent Vietnamese accent clipping).
 
 ---
 
-## 4. Double-Bezel Glass Card Architecture
+## 4. Blueprint Grid Architecture
 
-To convey physical depth in light mode, card containers must use nested layers to look like a glass plate sitting in a warm sand bezel.
-1. **Outer Shell**:
-   - Class: `bg-muted border border-border p-2 rounded-[24px] backdrop-blur-md` (radius-outer).
-2. **Inner Core**:
-   - Class: `bg-card border border-white/40 p-6 rounded-[18px] shadow-card-subtle backdrop-blur-lg` (radius-inner).
+We reject double-bezel glassmorphism cards and instead structure layouts using clean grid lines:
+- **Hairline Dividers**: Grid borders are defined by thin `1px` lines (`border-border`) dividing content like blueprint tiles.
+- **Backgrounds**: Surfaces are flat white or light gray. No gradient washes or excessive card shadows.
 
 ---
 
-## 5. Nested CTA & "Island" Button Design
+## 5. Number-Driven Content (Removing Icon Slop)
 
-Primary call-to-actions are pill-shaped and include a distinct interactive circle for their trailing icon:
-- **Main Button Pill**: `bg-primary text-primary-foreground hover:brightness-105 font-bold rounded-full px-6 py-3 text-sm flex items-center gap-4 transition-all duration-300 shadow-button`
-- **Button-in-Button Icon**: Any arrow (`↗`) or icon is nested inside its own round wrapper: `h-8 w-8 rounded-full bg-white/10 flex items-center justify-center shrink-0` (or `bg-black/5` on light/secondary buttons).
-- **Hover Physics**: The button scales slightly on hover/active (`active:scale-[0.98] transition-all`) and the nested icon translates diagonally: `group-hover:translate-x-1 group-hover:-translate-y-1`.
+We avoid generic icons (e.g. `Compass`, `Award`, `ShieldAlert`, `Zap`) for descriptive points. Instead, we use:
+- **Macro Numbers**: Serial numbers (`01`, `02`, `03`) in large, italic, serif fonts (`font-display`) to sequence services, values, or metrics.
+- **Typographic Details**: Clean text headings and labels that speak for themselves.
 
 ---
 
 ## 6. Layout Upgrades
 
-- **Asymmetrical Bento Grids**: Break symmetry. Group capabilities and showcases in 2x2 or 3-column bento grids. Use `grid-flow-dense` to ensure zero empty cells.
-- **Section Layout Diversity**: No two consecutive sections may use the same layout. Alternating "left-image + right-text" zigzag is banned.
-- **whitespace Maximization**: Use spacious padding `py-32 md:py-48` to allow sections to breathe.
-- **No cheap labels**: BANNED FOREVER are labels like "SECTION 01", "ABOUT US", "FAQ". Let the content and layout speak for themselves.
-
----
-
-## 7. Motion Choreography (Spring Physics)
-
-- **Scroll Entry Reveals**: As sections scroll into the viewport, they execute a subtle transition + fade (`translate-y-12 opacity-0 blur-sm` to `translate-y-0 opacity-100 blur-0` over 800ms).
-- **Hover Scale**: Every clickable card and image must react on hover. Use `group-hover:scale-102 transition-transform duration-700 ease-out` inside `overflow-hidden` containers.
-- **GPU Acceleration**: Always animate using `transform` and `opacity` to avoid mobile paint lag.
-- **No horizontal scroll**: Wrap the entire page in `overflow-x-hidden w-full max-w-full` to prevent horizontal scrollbars.
-
+- **Asymmetric Grid Layouts**: Alternate between single column, double column, and three-column grids.
+- **Whitespace Maximization**: Spacious padding (`py-24 md:py-32`) to allow sections to breathe.
+- **No cheap tags**: Let the design speak for itself.

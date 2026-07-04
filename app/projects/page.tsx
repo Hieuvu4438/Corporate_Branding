@@ -80,8 +80,8 @@ export default function Projects() {
           </div>
 
           {/* Visual Showcase side (Double-Bezel) */}
-          <div className="lg:col-span-7 bg-muted border border-border p-2 rounded-[24px] backdrop-blur-md group hover:border-primary/20 transition-colors duration-500 shadow-card-subtle">
-            <div className="bg-card border border-white/40 p-6 rounded-[18px] backdrop-blur-lg flex flex-col space-y-4">
+          <div className="lg:col-span-7 bg-muted border border-border p-2 rounded-2xl backdrop-blur-md group hover:border-primary/20 transition-colors duration-500 shadow-card-subtle">
+            <div className="bg-card border border-white/40 p-6 rounded-xl backdrop-blur-lg flex flex-col space-y-4">
               <div className="relative aspect-[16/10] w-full rounded-lg overflow-hidden border border-border/60 bg-background/50">
                 <img
                   src="/asset/img/Screenshot 2026-07-04 143200.png"
@@ -102,7 +102,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Visual Mockups Grid (Asymmetric Bento display of mobile screens) */}
           <div className="lg:col-span-7 order-last lg:order-first grid grid-cols-12 gap-4 items-end">
-            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-[18px] backdrop-blur-md shadow-sm">
+            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-xl backdrop-blur-md shadow-sm">
               <div className="bg-card border border-white/40 rounded-[12px] overflow-hidden aspect-[9/16] relative">
                 <img
                   src="/asset/img/Screenshot 2026-07-04 143925.png"
@@ -112,7 +112,7 @@ export default function Projects() {
               </div>
             </div>
             
-            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-[18px] backdrop-blur-md shadow-md -translate-y-4">
+            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-xl backdrop-blur-md shadow-md -translate-y-4">
               <div className="bg-card border border-white/40 rounded-[12px] overflow-hidden aspect-[9/16] relative">
                 <img
                   src="/asset/img/Screenshot 2026-07-04 144033.png"
@@ -122,7 +122,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-[18px] backdrop-blur-md shadow-sm">
+            <div className="col-span-4 bg-muted border border-border p-1.5 rounded-xl backdrop-blur-md shadow-sm">
               <div className="bg-card border border-white/40 rounded-[12px] overflow-hidden aspect-[9/16] relative">
                 <img
                   src="/asset/img/Screenshot 2026-07-04 144059.png"
