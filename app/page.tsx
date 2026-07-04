@@ -1,68 +1,68 @@
 import Link from "next/link";
-import { ArrowRight, MoveUpRight } from "lucide-react";
+import { ArrowRight, MoveUpRight, Sparkles } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 w-full overflow-x-hidden bg-background text-foreground">
       
-      {/* 1. Hero Section (Split-Screen Layout) */}
-      <section className="relative min-h-[90vh] flex items-center pt-28 pb-20 border-b border-border bg-background">
-        <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          {/* Left Column: Typographic Details */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-8">
-            <ScrollReveal delay={100} duration={1000}>
-              <span className="text-xs uppercase tracking-widest text-primary font-bold">
-                Nâng Tầm Nhận Diện Số
-              </span>
-            </ScrollReveal>
+      {/* 1. Attention: Hero Section (Restored Centered Layout) */}
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden py-32">
+        {/* Background Image with Filter */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="/asset/img/hero_bg_minimal.jpg"
+            alt="Minimalist Architectural Background"
+            className="w-full h-full object-cover filter brightness-[0.98] contrast-[1.02] saturate-[0.9] scale-102"
+          />
+          {/* Radial warm wash overlay */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,oklch(0.985_0.004_70)_85%)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90" />
+        </div>
 
-            {/* H1 Display Title (Clear and balanced for Vietnamese) */}
-            <ScrollReveal delay={300} duration={1000} className="w-full">
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight leading-[1.08] text-foreground text-balance">
-                Thiết kế trải nghiệm số <span className="text-primary italic font-serif">chạm cảm xúc</span> và kiến tạo niềm tin
-              </h1>
-            </ScrollReveal>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center space-y-12 flex flex-col items-center">
+          <ScrollReveal delay={100} duration={1000}>
+            <div className="inline-flex items-center gap-2.5 rounded-full bg-accent/30 backdrop-blur-md px-4 py-2 text-xs font-semibold text-primary ring-1 ring-border">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span className="uppercase tracking-widest">Nâng Tầm Nhận Diện Số</span>
+            </div>
+          </ScrollReveal>
 
-            <ScrollReveal delay={500} duration={1000}>
-              <p className="max-w-xl text-base sm:text-lg text-muted-foreground font-light leading-relaxed text-balance">
-                Kiến tạo sản phẩm số chuyên biệt cho doanh nghiệp công nghệ và y tế, kết hợp cấu trúc kỹ thuật chuẩn mực với mỹ thuật tinh tế.
-              </p>
-            </ScrollReveal>
+          {/* H1 Display Title (2-Line Iron Rule) */}
+          <ScrollReveal delay={300} duration={1000} className="w-full">
+            <h1 className="font-display text-5xl font-light tracking-tight text-foreground sm:text-7xl lg:text-8xl leading-[1.05] text-balance max-w-5xl mx-auto">
+              Thiết kế trải nghiệm số <span className="text-primary italic font-serif">chạm cảm xúc</span> và kiến tạo niềm tin
+            </h1>
+          </ScrollReveal>
 
-            <ScrollReveal delay={700} duration={1000}>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link
-                  href="/projects"
-                  className="inline-flex items-center justify-center font-semibold bg-primary text-primary-foreground hover:opacity-95 active:scale-[0.98] transition-all h-14 px-8 rounded-full gap-3 group text-sm shadow-button"
-                >
-                  <span className="tracking-wide">Xem dự án tiêu biểu</span>
-                  <MoveUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center font-semibold border border-border bg-card text-foreground hover:bg-muted active:scale-[0.98] transition-all h-14 px-8 rounded-full text-sm"
-                >
-                  <span className="tracking-wide">Nhận báo giá dự án</span>
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={500} duration={1000}>
+            <p className="max-w-2xl text-lg sm:text-xl text-muted-foreground font-light leading-relaxed text-balance mx-auto">
+              Đồng hành cùng các doanh nghiệp y tế và công nghệ để xây dựng những sản phẩm số đẳng cấp, trực quan và đáp ứng các tiêu chuẩn kỹ thuật nghiêm ngặt nhất.
+            </p>
+          </ScrollReveal>
 
-          {/* Right Column: Architectural Photography Asset */}
-          <div className="lg:col-span-5 w-full">
-            <ScrollReveal delay={400} duration={1000}>
-              <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-border/80 bg-muted group shadow-card-subtle">
-                <img
-                  src="/asset/img/hero_bg_minimal.jpg"
-                  alt="HopeRise Architecture Minimalist Studio"
-                  className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-102"
-                />
-              </div>
-            </ScrollReveal>
-          </div>
-
+          <ScrollReveal delay={700} duration={1000}>
+            <div className="flex flex-col sm:flex-row gap-6 pt-4">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-between font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer bg-primary text-primary-foreground hover:brightness-105 active:scale-[0.98] shadow-button h-14 pl-8 pr-3 rounded-full gap-8 group"
+              >
+                <span className="tracking-wide">Xem dự án tiêu biểu</span>
+                <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <MoveUpRight className="h-4 w-4 text-primary-foreground" />
+                </div>
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-between font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer border border-border bg-card/65 backdrop-blur-md text-foreground hover:bg-muted/80 active:scale-[0.98] h-14 pl-8 pr-3 rounded-full gap-8 group"
+              >
+                <span className="tracking-wide">Nhận báo giá dự án</span>
+                <div className="h-8 w-8 rounded-full bg-foreground/5 flex items-center justify-center shrink-0 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5">
+                  <ArrowRight className="h-4 w-4 text-foreground" />
+                </div>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
