@@ -11,8 +11,8 @@ export default function Home() {
         {/* Background Image with Filter */}
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/asset/img/hero_bg_minimal.jpg"
-            alt="Minimalist Architectural Background"
+            src="/asset/img/hero-bg.jpg"
+            alt="Warm Plaster Creative Background"
             className="w-full h-full object-cover filter brightness-[0.98] contrast-[1.02] saturate-[0.9] scale-102"
           />
           {/* Radial warm wash overlay */}
