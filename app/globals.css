@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* HopeRise Design System Tokens (OKLCH) */
+  --background: oklch(0.985 0.005 60);       /* Warm-Neutral light body background */
+  --foreground: oklch(0.2 0.015 60);        /* Deep warm-charcoal text */
+  
+  --card: oklch(1 0 0);                     /* Pure white for primary floating cards */
+  --card-foreground: oklch(0.2 0.015 60);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.015 60);
+
+  --primary: oklch(0.68 0.16 25);           /* HopeRise Coral-Orange */
+  --primary-foreground: oklch(0.98 0.005 60);
+
+  --secondary: oklch(0.55 0.12 165);        /* HopeRise Sage Green */
+  --secondary-foreground: oklch(0.98 0.005 60);
+
+  --muted: oklch(0.96 0.008 60);            /* Very light warm-gray background */
+  --muted-foreground: oklch(0.45 0.01 60);   /* Muted brown-gray text */
+
+  --accent: oklch(0.95 0.02 165);           /* Soft sage highlight */
+  --accent-foreground: oklch(0.2 0.015 60);
+
+  --destructive: oklch(0.4 0.18 25);
+  --destructive-foreground: oklch(0.98 0.005 60);
+
+  --border: oklch(0.9 0.008 60);            /* Soft border outline */
+  --input: oklch(0.9 0.008 60);
+  --ring: oklch(0.68 0.16 25);              /* Primary focus ring */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  /* Custom Shadows */
+  --shadow-card-subtle: 0 8px 24px oklch(0.2 0.015 60 / 0.03);
+  --shadow-button: 0 4px 12px oklch(0.68 0.16 25 / 0.15);
+
+  /* Accordion Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduced Motion Utility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
