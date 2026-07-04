@@ -47,50 +47,128 @@ interface IPhone17ProMaxMockupProps {
 
 function IPhone17ProMaxMockup({ src, alt, className = "" }: IPhone17ProMaxMockupProps) {
   return (
-    <div className={`relative w-[230px] aspect-[9/19.5] bg-[#1a1a1a] rounded-[48px] p-2.5 border-[4px] border-[#3a3a3c] ring-[1px] ring-black/20 shadow-2xl transition-all duration-500 hover:shadow-primary/10 ${className}`}>
-      {/* Dynamic Island */}
-      <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-14 h-4 bg-black rounded-full z-30 flex items-center justify-center">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#111] absolute right-3"></div>
+    <div className={`relative w-[230px] aspect-[421/852] bg-[#CCCBC9] rounded-[48px] border border-[#B8B7B5] shadow-2xl transition-all duration-500 hover:shadow-primary/10 select-none ${className}`}>
+      
+      {/* Frame Accents (Silver antenna bands) */}
+      <div className="absolute top-0 left-[75.5%] w-[10px] h-[4px] bg-black/25"></div>
+      <div className="absolute bottom-0 left-[22.1%] w-[10px] h-[4px] bg-black/25"></div>
+      <div className="absolute left-0 top-[10.5%] w-[4px] h-[10px] bg-black/25"></div>
+      <div className="absolute right-0 top-[10.5%] w-[4px] h-[10px] bg-black/25"></div>
+      <div className="absolute left-0 top-[88.2%] w-[4px] h-[10px] bg-black/25"></div>
+      <div className="absolute right-0 top-[88.2%] w-[4px] h-[10px] bg-black/25"></div>
+      
+      {/* Side Buttons (Silver) */}
+      <div className="absolute left-[-2px] top-[18.78%] w-[2.5px] h-[33px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
+      <div className="absolute left-[-2px] top-[25.9%] w-[2.5px] h-[63px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
+      <div className="absolute left-[-2px] top-[35.2%] w-[2.5px] h-[63px] bg-[#CCCBC9] border border-black/10 rounded-r-sm"></div>
+      <div className="absolute right-[-2px] top-[31.2%] w-[2.5px] h-[100px] bg-[#CCCBC9] border border-black/10 rounded-l-sm"></div>
+
+      {/* Screen Border (Black Inner Bezel) */}
+      <div className="absolute top-[6px] bottom-[6px] left-[9px] right-[9px] bg-black rounded-[42px] overflow-hidden flex flex-col justify-between">
+        
+        {/* Screen Display Area (within the bezel) */}
+        <div className="absolute top-[14px] bottom-[14px] left-[14px] right-[14px] bg-zinc-950 rounded-[30px] overflow-hidden relative">
+          <img
+            src={src}
+            alt={alt}
+            className="object-cover w-full h-full"
+          />
+          {/* Glass glare reflection */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/3 to-white/6 pointer-events-none z-10" />
+        </div>
+
+        {/* Dynamic Island (Pill Shape) */}
+        <div className="absolute top-[24px] left-[50%] -translate-x-1/2 w-[110px] h-[30px] bg-black rounded-[15px] z-30 flex items-center justify-between px-3">
+          {/* Camera element inside Dynamic Island */}
+          <div className="w-[10px] h-[10px] rounded-full bg-white/10 ml-auto mr-1 border border-white/5"></div>
+        </div>
       </div>
       
-      {/* Screen Frame with thin border */}
-      <div className="w-full h-full rounded-[38px] overflow-hidden bg-black relative border border-black/40">
-        <img
-          src={src}
-          alt={alt}
-          className="object-cover w-full h-full"
-        />
-        {/* Screen Glare Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none z-10" />
-      </div>
-      
-      {/* Buttons */}
-      <div className="absolute left-[-5px] top-20 w-1.5 h-6 bg-[#3a3a3c] rounded-r"></div>
-      <div className="absolute left-[-5px] top-30 w-1.5 h-9 bg-[#3a3a3c] rounded-r"></div>
-      <div className="absolute left-[-5px] top-41 w-1.5 h-9 bg-[#3a3a3c] rounded-r"></div>
-      <div className="absolute right-[-5px] top-34 w-1.5 h-11 bg-[#3a3a3c] rounded-l"></div>
     </div>
   );
 }
 
-interface TabletMockupProps {
+interface MacbookProMockupProps {
   src: string;
+  url: string;
   alt: string;
   className?: string;
 }
 
-function TabletMockup({ src, alt, className = "" }: TabletMockupProps) {
+function MacbookProMockup({ src, url, alt, className = "" }: MacbookProMockupProps) {
   return (
-    <div className={`relative bg-zinc-900 rounded-[24px] p-2 border-[4px] border-zinc-800 shadow-2xl ${className}`}>
-      {/* Screen Frame */}
-      <div className="w-full h-full rounded-[18px] overflow-hidden bg-zinc-950 relative border border-zinc-800/80">
-        <img
-          src={src}
-          alt={alt}
-          className="object-cover w-full h-full"
-        />
-        {/* Screen Glare Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 pointer-events-none z-10" />
+    <div className={`relative w-full aspect-[2812/1788] select-none ${className}`}>
+      {/* Laptop Lid (Outer Aluminum Shell) */}
+      <div className="absolute top-[8.5%] left-[11%] right-[11%] bottom-[16%] bg-black rounded-2xl border-[4px] border-[#C3C2C0] shadow-2xl flex flex-col justify-between overflow-hidden">
+        {/* Top Camera Notch */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-b-md z-30 flex items-center justify-center">
+          <div className="w-1.5 h-1.5 rounded-full bg-zinc-800"></div>
+        </div>
+        
+        {/* Screen Display Area (exactly 16:10 aspect ratio inside the bezels) */}
+        <div className="w-full h-full p-2 relative bg-black">
+          <div className="relative w-full h-full overflow-hidden bg-zinc-950 border border-zinc-900">
+            <img
+              src={src}
+              alt={alt}
+              className="object-cover w-full h-full"
+            />
+            {/* Screen Glare Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/2 to-white/4 pointer-events-none z-10" />
+          </div>
+        </div>
+      </div>
+      
+      {/* Aluminum Hinge Connection */}
+      <div className="absolute bottom-[14.5%] left-[15%] right-[15%] h-[1.5%] bg-[#1a1a1a] rounded-t-sm"></div>
+      
+      {/* Keyboard Base / Deck */}
+      <div className="absolute bottom-[9.5%] left-[2%] right-[2%] h-[5%] bg-[#C3C2C0] border-t border-[#DEDDDC] border-b border-[#9E9D9B] rounded-t-[6px] rounded-b-[24px] shadow-2xl flex justify-center">
+        {/* Screen Opening Notch */}
+        <div className="w-20 h-2 bg-[#9E9D9B] rounded-b-md"></div>
+      </div>
+      
+      {/* Base shadow */}
+      <div className="absolute bottom-[6%] left-[4%] right-[4%] h-[4%] bg-black/15 blur-md rounded-full -z-10"></div>
+    </div>
+  );
+}
+
+interface IPadProMockupProps {
+  src: string;
+  alt: string;
+  orientation?: "portrait" | "landscape";
+  className?: string;
+}
+
+function IPadProMockup({ src, alt, orientation = "portrait", className = "" }: IPadProMockupProps) {
+  const isPortrait = orientation === "portrait";
+  return (
+    <div 
+      className={`relative select-none ${className}`}
+      style={{ aspectRatio: isPortrait ? "1612/2099" : "2099/1612" }}
+    >
+      {/* iPad Outer Bezel (Aluminum Ring + Screen Border) */}
+      <div className="absolute inset-0 bg-black rounded-[36px] border-[5px] border-[#3a3a3c] ring-[1px] ring-black/40 shadow-2xl flex flex-col overflow-hidden">
+        {/* Screen Area */}
+        <div 
+          className="absolute overflow-hidden bg-zinc-950 border border-zinc-900"
+          style={{
+            left: isPortrait ? "4.65%" : "3.74%",
+            right: isPortrait ? "4.65%" : "3.74%",
+            top: isPortrait ? "3.74%" : "4.65%",
+            bottom: isPortrait ? "3.74%" : "4.65%",
+            borderRadius: "24px",
+          }}
+        >
+          <img
+            src={src}
+            alt={alt}
+            className="object-cover w-full h-full"
+          />
+          {/* Screen Reflection */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/2 to-white/4 pointer-events-none z-10" />
+        </div>
       </div>
     </div>
   );
@@ -122,7 +200,7 @@ export default function Projects() {
         </ScrollReveal>
       </section>
 
-      {/* 2. LegalDiff Showcase (Web App in Browser Mockup + side document badge) */}
+      {/* 2. LegalDiff Showcase (Web App in Macbook Pro) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
@@ -166,34 +244,26 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Visual Showcase (Browser Mockup in a clean background) */}
+          {/* Visual Showcase (Macbook Pro Mockup) */}
           <div className="lg:col-span-7 w-full">
             <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm flex items-center justify-center overflow-hidden">
-              <BrowserMockup
+              <MacbookProMockup
                 src="/asset/img/Screenshot 2026-07-04 143200.png"
                 url="https://legaldiff.vn/analysis"
                 alt="Giao diện LegalDiff"
                 className="w-full relative z-10"
               />
-              {/* Document analysis checklist decoration badge */}
-              <div className="absolute top-12 right-12 bg-card border border-border/80 p-4 rounded-xl shadow-xl z-20 hidden md:block w-48 text-left space-y-2 animate-pulse font-sans">
-                <span className="text-[10px] font-bold text-primary uppercase tracking-wider block">Pháp lý phân tích</span>
-                <span className="text-xs font-semibold text-foreground block">Độ chính xác: 99.8%</span>
-                <div className="w-full bg-muted h-1 rounded-full overflow-hidden">
-                  <div className="bg-primary h-full w-[99.8%]"></div>
-                </div>
-              </div>
             </ScrollReveal>
           </div>
 
         </div>
       </section>
 
-      {/* 3. CareMate Showcase (Mobile App in realistic staggered iPhone 17 Pro Max) */}
+      {/* 3. CareMate Showcase (Mobile App in realistic iPhone 17 Pro Max Silver) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
-          {/* Visual Showcase (Staggered Overlapping iPhone 17 Pro Max) */}
+          {/* Visual Showcase (Staggered Overlapping iPhone 17 Pro Max Silver) */}
           <div className="lg:col-span-7 order-last lg:order-first w-full flex items-center justify-center">
             <ScrollReveal className="relative w-full max-w-md h-[480px] flex items-center justify-center select-none py-8 bg-muted/30 rounded-2xl border border-border/60">
               {/* Left Phone (SOS Screen) */}
@@ -260,7 +330,7 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 4. Ethnosoul Legacy (Web App with layered browser mockups) */}
+      {/* 4. Ethnosoul Legacy (Macbook Pro + iPad Pro Landscape) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
@@ -304,22 +374,22 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Visual Showcase (Layered Browser Mockups + Device Collage) */}
+          {/* Visual Showcase (Macbook Pro + iPad Pro Landscape Collage) */}
           <div className="lg:col-span-7 w-full pb-8">
             <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
-              {/* Main Desktop Browser */}
-              <BrowserMockup
+              {/* Macbook Pro Mockup */}
+              <MacbookProMockup
                 src="/asset/img/ethnosoul_legacy_01.png"
                 url="https://ethnosoul.vn/legacy"
                 alt="Ethnosoul Legacy Home"
                 className="w-[85%] -translate-x-6 relative z-10"
               />
-              {/* Layered Second Browser Mockup (representing mobile collections preview) */}
-              <div className="absolute bottom-6 right-6 w-[45%] z-20 shadow-2xl scale-95 hover:scale-100 transition-transform duration-500">
-                <BrowserMockup
+              {/* iPad Pro Landscape Mockup overlapping bottom right */}
+              <div className="absolute bottom-[8%] right-[8%] w-[48%] z-20 shadow-2xl scale-95 hover:scale-100 transition-transform duration-500">
+                <IPadProMockup
                   src="/asset/img/ethnosoul_legacy_02.png"
-                  url="https://ethnosoul.vn/legacy/story"
                   alt="Ethnosoul Legacy Story"
+                  orientation="landscape"
                 />
               </div>
             </ScrollReveal>
@@ -328,25 +398,26 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 5. School LMS Showcase (Education Platform with browser + tablet layered mockups) */}
+      {/* 5. School LMS Showcase (Macbook Pro + iPad Pro Portrait) */}
       <section className="mx-auto max-w-7xl px-6 lg:px-8 w-full border-t border-border/40 pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
-          {/* Visual Showcase (Layered Desktop + Tablet Mockup) */}
+          {/* Visual Showcase (Macbook Pro + iPad Pro Portrait Collage) */}
           <div className="lg:col-span-7 order-last lg:order-first w-full pb-8">
             <ScrollReveal delay={200} className="relative bg-muted/40 p-6 sm:p-10 rounded-2xl border border-border/80 shadow-sm aspect-[16/11] flex items-center justify-center overflow-hidden">
-              {/* Main Desktop Browser */}
-              <BrowserMockup
+              {/* Macbook Pro Mockup */}
+              <MacbookProMockup
                 src="/asset/img/school_lms_01.png"
                 url="https://schoollms.edu.vn/dashboard"
                 alt="School LMS Dashboard"
-                className="w-[85%] -translate-x-6 relative z-10"
+                className="w-[82%] -translate-x-8 -translate-y-4 relative z-10"
               />
-              {/* Layered Tablet Mockup overlapping bottom right */}
-              <div className="absolute bottom-6 right-6 w-[50%] z-20 scale-95 hover:scale-100 transition-transform duration-500">
-                <TabletMockup
+              {/* iPad Pro Portrait Mockup overlapping bottom right */}
+              <div className="absolute bottom-[4%] right-[8%] w-[34%] z-20 shadow-2xl scale-95 hover:scale-100 transition-transform duration-500">
+                <IPadProMockup
                   src="/asset/img/school_lms_02.png"
                   alt="School LMS Mobile Courses"
+                  orientation="portrait"
                 />
               </div>
             </ScrollReveal>
