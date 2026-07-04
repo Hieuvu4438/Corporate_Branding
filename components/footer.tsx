@@ -43,6 +43,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/ecommerce" className="hover:text-primary transition-colors">
+                  E-Commerce Showcase
+                </Link>
+              </li>
+              <li>
                 <Link href="/faq" className="hover:text-primary transition-colors">
                   Q&A / Hỏi đáp
                 </Link>

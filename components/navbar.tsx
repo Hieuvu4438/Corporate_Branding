@@ -12,6 +12,7 @@ const navigationItems = [
   { name: "Về chúng tôi", href: "/about" },
   { name: "Năng lực cốt lõi", href: "/capabilities" },
   { name: "Dự án", href: "/projects" },
+  { name: "E-Commerce", href: "/ecommerce" },
   { name: "Hỏi đáp", href: "/faq" },
 ];
 
