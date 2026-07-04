@@ -1,17 +1,18 @@
 # Spec: Corporate Branding Portfolio Website (Next.js & React)
 
 ## Objective
-To build a premium, responsive multi-page portfolio website for our agency using a modern React & Next.js framework. The visual design is inspired by the "Obsidian Minimalist & Cinematic Glassmorphism" theme (Awwwards-tier digital experience, following taste-skill principles). The homepage will be revamped with a full-screen, high-contrast background hero image, custom header/footer layout, smooth scroll-entry animations, and clean glassmorphic double-bezel cards.
+To build a premium, responsive multi-page portfolio website for our agency using a modern React & Next.js framework. The visual design is inspired by the "Warm Editorial & Glassmorphism" theme (Awwwards-tier digital experience, following taste-skill principles). The homepage will be redesigned with an elegant light theme, clean typography scales, and a full-bleed warm background. The projects page will be redesigned to present both case studies side-by-side in a staggered, asymmetrical grid to elevate its layout beauty.
 
 ---
 
 ## Tech Stack
 - **Framework**: Next.js 16+ (App Router)
 - **Language**: TypeScript (Strict Mode)
-- **Styling**: Tailwind CSS (v4 with CSS variables and OKLCH color space config)
+- **Styling**: Tailwind CSS (v4 with CSS variables and OKLCH color space config for a warm paper-cream and terracotta system)
 - **UI Components**: Shadcn UI (Radix UI primitives)
 - **Icons**: Lucide React
-- **Animation**: Custom React IntersectionObserver hook (`useIntersectionObserver`) styled with modern GPU-accelerated Tailwind transitions (avoiding external dependencies to optimize loading performance).
+- **Animation**: Custom React IntersectionObserver hook (`useIntersectionObserver`) styled with modern GPU-accelerated Tailwind transitions.
+
 - **Development Tooling**:
   - Package Manager: `npm`
   - Linting: `eslint` (Strict React/TS rules)
